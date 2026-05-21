@@ -6,6 +6,7 @@ import type { SpendingCategory } from '../../types'
 interface Props {
   data: SpendingCategory[]
   compact?: boolean
+  onCategoryClick?: (id: string) => void
 }
 
 type ActiveShapeProps = PieSectorDataItem & { payload?: SpendingCategory }
@@ -23,14 +24,17 @@ function renderActiveShape(props: ActiveShapeProps) {
     <g>
       {payload && (
         <>
-          <text x={cx} y={cy - 14} textAnchor="middle" fill="#1e293b" fontSize={14} fontWeight={600}>
-            {payload.name}
+          <text x={cx} y={cy - 14} textAnchor="middle" fill="#1e293b" fontSize={13} fontWeight={600}>
+            {payload.name.length > 18 ? payload.name.slice(0, 16) + '…' : payload.name}
           </text>
-          <text x={cx} y={cy + 8} textAnchor="middle" fill="#64748b" fontSize={12}>
+          <text x={cx} y={cy + 6} textAnchor="middle" fill="#64748b" fontSize={11}>
             {formatPercent(payload.percentage)}
           </text>
-          <text x={cx} y={cy + 26} textAnchor="middle" fill="#3b82f6" fontSize={11} fontWeight={600}>
+          <text x={cx} y={cy + 22} textAnchor="middle" fill="#3b82f6" fontSize={11} fontWeight={600}>
             {formatCurrency(payload.amount, true)}
+          </text>
+          <text x={cx} y={cy + 36} textAnchor="middle" fill="#94a3b8" fontSize={9}>
+            click to explore
           </text>
         </>
       )}
@@ -54,7 +58,7 @@ function renderActiveShape(props: ActiveShapeProps) {
   )
 }
 
-export function SpendingPieChart({ data, compact = false }: Props) {
+export function SpendingPieChart({ data, compact = false, onCategoryClick }: Props) {
   return (
     <ResponsiveContainer width="100%" height={compact ? 280 : 380}>
       <PieChart>
@@ -62,10 +66,12 @@ export function SpendingPieChart({ data, compact = false }: Props) {
           data={data}
           cx="50%"
           cy="50%"
-          innerRadius={compact ? 60 : 80}
-          outerRadius={compact ? 100 : 130}
+          innerRadius={compact ? 55 : 80}
+          outerRadius={compact ? 95 : 130}
           dataKey="amount"
           activeShape={renderActiveShape as (props: PieSectorDataItem) => React.ReactElement}
+          onClick={(data) => onCategoryClick?.((data as { id?: string }).id ?? '')}
+          style={onCategoryClick ? { cursor: 'pointer' } : undefined}
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.color} />

@@ -1,3 +1,21 @@
+export interface FraudEstimate {
+  amount: number
+  percentage: number
+  source: string
+  examples: string[]
+}
+
+export interface SubCategory {
+  id: string
+  name: string
+  amount: number
+  lead: string
+  leadTitle: string
+  description: string
+  spendingItems: string[]
+  fraudEstimate?: FraudEstimate
+}
+
 export interface SpendingCategory {
   id: string
   name: string
@@ -5,7 +23,12 @@ export interface SpendingCategory {
   percentage: number
   color: string
   description: string
-  subCategories?: SpendingCategory[]
+  lead?: string
+  leadTitle?: string
+  leadWebsite?: string
+  spendingItems?: string[]
+  fraudEstimate?: FraudEstimate
+  subCategories?: SubCategory[]
 }
 
 export interface Agency {
@@ -54,6 +77,13 @@ export interface TaxInputs {
   filingStatus: 'single' | 'married_joint' | 'married_separate' | 'head_of_household'
   state: string
   dependents: number
+  mode: 'individual' | 'business'
+  // Business-specific
+  businessType?: 'sole_prop' | 's_corp' | 'c_corp' | 'partnership'
+  businessNetIncome?: number
+  ownerSalary?: number       // For S-corp: W-2 salary paid to self
+  numEmployees?: number
+  totalEmployeeWages?: number
 }
 
 export interface TaxAllocation {
@@ -65,12 +95,31 @@ export interface TaxAllocation {
   icon: string
 }
 
+export interface BusinessTaxResult {
+  selfEmploymentTax: number
+  employerPayrollTax: number
+  futaTax: number
+  businessIncomeTax: number
+  totalTaxBurden: number
+  effectiveBusinessRate: number
+  breakdown: BusinessTaxLine[]
+}
+
+export interface BusinessTaxLine {
+  label: string
+  amount: number
+  rate?: string
+  note?: string
+  color: string
+}
+
 export interface TaxResult {
   grossIncome: number
   federalTax: number
   effectiveRate: number
   marginalRate: number
   allocations: TaxAllocation[]
+  business?: BusinessTaxResult
 }
 
 export interface DebtSnapshot {
