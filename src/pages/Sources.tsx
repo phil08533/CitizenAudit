@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Database, AlertCircle } from 'lucide-react'
+import { FoundingFatherBadge } from '../components/ui/FoundingFatherBadge'
+import { FOUNDING_FATHERS } from '../data/foundingFathers'
 
 const SOURCES = [
   {
@@ -97,20 +99,25 @@ const METHODOLOGY_NOTES = [
 
 export function Sources() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
       {/* Header */}
-      <section className="bg-gradient-to-r from-slate-700 to-blue-900 text-white py-14">
+      <section className="hero-gradient stars-bg text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                <Database className="w-5 h-5" />
+            <div className="flex items-start justify-between gap-8">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center">
+                    <Database className="w-5 h-5" />
+                  </div>
+                  <h1 className="text-3xl font-bold font-serif">Sources & Methodology</h1>
+                </div>
+                <p className="text-white/75 max-w-xl mb-4">
+                  Every number on this site comes from official U.S. government data. Here's exactly where each piece of information originates.
+                </p>
+                <FoundingFatherBadge father={FOUNDING_FATHERS.sources} variant="compact" />
               </div>
-              <h1 className="text-3xl font-bold">Sources & Methodology</h1>
             </div>
-            <p className="text-slate-300 max-w-xl">
-              Every number on this site comes from official U.S. government data. Here's exactly where each piece of information originates.
-            </p>
           </motion.div>
         </div>
       </section>

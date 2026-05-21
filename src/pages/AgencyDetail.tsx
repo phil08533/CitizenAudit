@@ -2,6 +2,8 @@ import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink, Building2, DollarSign, FileText } from 'lucide-react'
 import { BudgetHistoryChart } from '../components/charts/BudgetHistoryChart'
+import { FoundingFatherBadge } from '../components/ui/FoundingFatherBadge'
+import { FOUNDING_FATHERS } from '../data/foundingFathers'
 import { getAgencyById } from '../services/usaspending'
 import { formatCurrency } from '../utils/formatters'
 
@@ -29,9 +31,9 @@ export function AgencyDetail() {
     : null
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
       {/* Header */}
-      <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-14">
+      <section className="hero-gradient stars-bg text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <Link
@@ -138,6 +140,11 @@ export function AgencyDetail() {
 
           {/* Sidebar */}
           <div className="space-y-6">
+            {/* Founding Father Badge */}
+            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
+              <FoundingFatherBadge father={FOUNDING_FATHERS.agency} variant="sidebar" />
+            </motion.div>
+
             {/* Budget stat */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}

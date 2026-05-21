@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { Users, Search, Info, MapPin } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { RepresentativeCard } from '../components/cards/RepresentativeCard'
+import { FoundingFatherBadge } from '../components/ui/FoundingFatherBadge'
+import { FOUNDING_FATHERS } from '../data/foundingFathers'
 import { lookupRepsByZip, getMockReps } from '../services/civicinfo'
 import type { Representative } from '../types'
 
@@ -66,20 +68,27 @@ export function Representatives() {
   const houseMembers = reps?.filter(r => r.chamber === 'House') ?? []
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
       {/* Header */}
-      <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-14">
+      <section className="hero-gradient stars-bg text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                <Users className="w-5 h-5" />
+            <div className="flex items-start justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <h1 className="text-3xl font-bold font-serif">Find Your Representatives</h1>
+                </div>
+                <p className="text-white/75 max-w-xl">
+                  Enter your ZIP code to find your U.S. senators and House representative. Only 27% of Americans can name their representative. Be one of them.
+                </p>
+                <div className="mt-4">
+                  <FoundingFatherBadge father={FOUNDING_FATHERS.representatives} variant="compact" />
+                </div>
               </div>
-              <h1 className="text-3xl font-bold">Find Your Representatives</h1>
             </div>
-            <p className="text-green-100 max-w-xl">
-              Enter your ZIP code to find your U.S. senators and House representative, with contact information.
-            </p>
           </motion.div>
         </div>
       </section>

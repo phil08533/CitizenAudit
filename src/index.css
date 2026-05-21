@@ -1,53 +1,132 @@
 @import "tailwindcss";
 
+/* ── U.S. Flag Colors ──────────────────────────────────────────────────── */
+/* Old Glory Red:  #B22234   |   Old Glory Blue: #3C3B6E   |   White: #FFF  */
+
 @layer base {
   :root {
     color-scheme: light dark;
+
+    --red:   179 34 52;    /* #B22234 Old Glory Red  */
+    --blue:  30 40 100;    /* #1E2864 deep union blue */
+    --gold:  212 175 55;   /* #D4AF37 patriot gold   */
   }
 
   body {
     margin: 0;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f7f2;
+    color: #1a1a2e;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  .dark body { background-color: #0d1117; color: #f0ede8; }
+
+  html { scroll-behavior: smooth; }
+
+  h1, h2, h3 { font-family: 'Georgia', serif; }
+
+  /* sans-serif utility for UI elements */
+  .font-sans-ui { font-family: system-ui, -apple-system, sans-serif; }
 }
 
+/* ── Patriotic utility classes ─────────────────────────────────────────── */
 @layer utilities {
-  .glass {
-    background: rgba(255, 255, 255, 0.08);
+  .text-glory-red   { color: #B22234; }
+  .text-glory-blue  { color: #1E2864; }
+  .dark .text-glory-red  { color: #E8526A; }
+  .dark .text-glory-blue { color: #7B9BF8; }
+
+  .bg-glory-red  { background-color: #B22234; }
+  .bg-glory-blue { background-color: #1E2864; }
+  .bg-parchment  { background-color: #f5f0e0; }
+  .dark .bg-parchment { background-color: #1a1a10; }
+
+  /* Stars pattern */
+  .stars-bg {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* Stripe accent */
+  .stripe-accent {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 6px,
+      rgba(178,34,52,0.08) 6px,
+      rgba(178,34,52,0.08) 12px
+    );
+  }
+
+  /* Hero gradient — deep blue + red fade */
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      #0d1b3e 0%,
+      #1e2864 30%,
+      #2d1f4a 60%,
+      #4a0e1a 100%
+    );
+  }
+
+  /* Parchment card */
+  .parchment-card {
+    background: linear-gradient(135deg, #fdf8ec 0%, #f5f0e0 100%);
+    border: 1px solid #d4b896;
+  }
+  .dark .parchment-card {
+    background: linear-gradient(135deg, #1e1a0e 0%, #12100a 100%);
+    border: 1px solid #4a3a1e;
+  }
+
+  /* Glass card — patriotic tint */
+  .glass-patriot {
+    background: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
-  .dark .glass {
-    background: rgba(17, 24, 39, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .text-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+
+  .text-gradient-patriot {
+    background: linear-gradient(135deg, #e8526a 0%, #ffffff 40%, #7b9bf8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Gold shimmer */
+  .text-gold { color: #D4AF37; }
+  .border-gold { border-color: #D4AF37; }
+
   .card-hover {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .card-hover:hover {
     transform: translateY(-2px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-  }
-  .dark .card-hover:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
   }
 }
 
-/* Custom scrollbar */
+/* ── Scrollbar ─────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgb(148 163 184 / 0.4); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgb(148 163 184 / 0.7); }
+::-webkit-scrollbar-thumb { background: rgba(148,163,184,0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(148,163,184,0.7); }
+
+/* ── Timeline component ────────────────────────────────────────────────── */
+.timeline-item::before {
+  content: '★';
+  position: absolute;
+  left: -1.6rem;
+  top: 0.1rem;
+  font-size: 0.75rem;
+  color: #D4AF37;
+}
+
+/* ── Eagle SVG watermark ───────────────────────────────────────────────── */
+.eagle-watermark {
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+}

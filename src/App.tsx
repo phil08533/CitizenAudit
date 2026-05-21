@@ -9,13 +9,15 @@ import { Representatives } from './pages/Representatives'
 import { ContactAction } from './pages/ContactAction'
 import { About } from './pages/About'
 import { Sources } from './pages/Sources'
+import { TaxHistory } from './pages/TaxHistory'
+import { CitizenResponsibility } from './pages/CitizenResponsibility'
 
 const BASE = import.meta.env.BASE_URL
 
 export default function App() {
   return (
     <BrowserRouter basename={BASE}>
-      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white">
+      <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#f8f7f2', color: '#1a1a2e' }}>
         <Navbar />
         <main className="flex-1">
           <Routes>
@@ -27,6 +29,8 @@ export default function App() {
             <Route path="/contact" element={<ContactAction />} />
             <Route path="/about" element={<About />} />
             <Route path="/sources" element={<Sources />} />
+            <Route path="/tax-history" element={<TaxHistory />} />
+            <Route path="/responsibility" element={<CitizenResponsibility />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
@@ -39,10 +43,10 @@ export default function App() {
 function NotFound() {
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center gap-4 text-center px-4">
-      <div className="text-6xl">🏛️</div>
-      <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Page Not Found</h1>
-      <p className="text-slate-500 dark:text-slate-400">This page doesn't exist in the federal record.</p>
-      <a href={BASE} className="text-blue-500 hover:text-blue-600 font-medium">
+      <div className="text-6xl font-serif text-glory-red">★</div>
+      <h1 className="text-3xl font-bold" style={{ color: '#1a1a2e' }}>Page Not Found</h1>
+      <p className="text-slate-500">This page doesn't exist in the federal record.</p>
+      <a href={BASE} className="text-glory-blue hover:underline font-medium">
         Return to Home
       </a>
     </div>

@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, BarChart3, Moon, Sun } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 import { useTheme } from '../../hooks/useTheme'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/tax-estimator', label: 'Tax Estimator' },
-  { to: '/spending', label: 'Spending Explorer' },
+  { to: '/spending', label: 'Spending' },
   { to: '/representatives', label: 'Representatives' },
-  { to: '/contact', label: 'Contact Action' },
+  { to: '/tax-history', label: 'Tax History' },
+  { to: '/responsibility', label: 'Your Duty' },
+  { to: '/contact', label: 'Take Action' },
   { to: '/about', label: 'About' },
 ]
 
@@ -19,29 +21,31 @@ export function Navbar() {
   const { theme, toggle } = useTheme()
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/60 dark:border-slate-700/60 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 bg-glory-blue shadow-lg shadow-black/20">
+      {/* Red stripe accent at top */}
+      <div className="h-1 bg-glory-red" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 font-bold text-lg" onClick={() => setOpen(false)}>
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <BarChart3 className="w-4 h-4 text-white" />
+          <Link to="/" className="flex items-center gap-2.5 font-bold text-lg" onClick={() => setOpen(false)}>
+            <div className="w-8 h-8 rounded-lg bg-white/15 border border-white/30 flex items-center justify-center text-white text-base">
+              ★
             </div>
-            <span className="text-slate-900 dark:text-white">
-              Citizen<span className="text-blue-500">Audit</span>
+            <span className="text-white font-serif tracking-wide">
+              Citizen<span className="text-amber-400">Audit</span>
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {NAV_LINKS.map(link => (
               <Link
                 key={link.to}
                 to={link.to}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                   pathname === link.to
-                    ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-100 dark:hover:bg-slate-800'
+                    ? 'bg-white/20 text-white font-semibold'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
               >
                 {link.label}
@@ -53,15 +57,15 @@ export function Navbar() {
             {/* Theme toggle */}
             <button
               onClick={toggle}
-              className="p-2 rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="xl:hidden p-2 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-colors"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >
@@ -78,7 +82,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
+            className="xl:hidden border-t border-white/20 bg-glory-blue"
           >
             <nav className="px-4 py-3 flex flex-col gap-1">
               {NAV_LINKS.map(link => (
@@ -88,8 +92,8 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                     pathname === link.to
-                      ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
-                      : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
+                      ? 'bg-white/20 text-white font-semibold'
+                      : 'text-white/70 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {link.label}
