@@ -212,13 +212,14 @@ const HISTORY: Event[] = [
   },
 ]
 
-const ERA_COLORS: Record<string, string> = {
-  'Colonial Era': '#6B4226',
-  'Road to Revolution': '#B22234',
-  'The Founding': '#1E2864',
-  'Civil War Expansion': '#4a4a4a',
-  'Modern Tax System': '#1a6b3a',
-  'Where We Stand': '#7B0000',
+// Tailwind classes for era labels — light text on colored pill for dark mode readability
+const ERA_BADGE_CLASSES: Record<string, string> = {
+  'Colonial Era':        'bg-amber-100   dark:bg-amber-900/50   text-amber-900   dark:text-amber-200   border-amber-400   dark:border-amber-600',
+  'Road to Revolution':  'bg-red-100     dark:bg-red-900/50     text-red-800     dark:text-red-200     border-red-400     dark:border-red-600',
+  'The Founding':        'bg-blue-100    dark:bg-blue-900/50    text-blue-900    dark:text-blue-200    border-blue-400    dark:border-blue-500',
+  'Civil War Expansion': 'bg-slate-100   dark:bg-slate-700      text-slate-800   dark:text-slate-200   border-slate-400   dark:border-slate-500',
+  'Modern Tax System':   'bg-green-100   dark:bg-green-900/50   text-green-900   dark:text-green-200   border-green-400   dark:border-green-600',
+  'Where We Stand':      'bg-red-200     dark:bg-red-900/60     text-red-900     dark:text-red-200     border-red-500     dark:border-red-600',
 }
 
 const TYPE_COLORS: Record<string, string> = {
@@ -259,7 +260,7 @@ export function TaxHistory() {
                 <br />
                 <span className="text-amber-400">to the $33.9 Trillion Debt</span>
               </h1>
-              <p className="text-blue-200 text-lg max-w-2xl leading-relaxed font-sans-ui">
+              <p className="text-white/85 text-lg max-w-2xl leading-relaxed font-sans-ui">
                 America was literally founded over a tax dispute. Two and a half centuries later, every American
                 citizen should know this history — because we are still living it.
               </p>
@@ -328,14 +329,7 @@ export function TaxHistory() {
                   {/* Era label */}
                   {(i === 0 || HISTORY[i - 1].era !== event.era) && (
                     <div className="mb-4 -ml-10">
-                      <span
-                        className="text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border font-sans-ui"
-                        style={{
-                          backgroundColor: `${ERA_COLORS[event.era]}20`,
-                          borderColor: ERA_COLORS[event.era],
-                          color: ERA_COLORS[event.era],
-                        }}
-                      >
+                      <span className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border font-sans-ui ${ERA_BADGE_CLASSES[event.era] ?? 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-500'}`}>
                         {event.era}
                       </span>
                     </div>
@@ -394,9 +388,9 @@ export function TaxHistory() {
                           </div>
 
                           {/* Significance */}
-                          <div className="p-4 rounded-xl" style={{ backgroundColor: `${color}10`, border: `1px solid ${color}25` }}>
-                            <h4 className="text-xs font-bold uppercase tracking-wide mb-2" style={{ color }}>Why It Matters</h4>
-                            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-sans-ui">{event.significance}</p>
+                          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+                            <h4 className="text-xs font-bold uppercase tracking-wide mb-2 text-slate-500 dark:text-slate-300">Why It Matters</h4>
+                            <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-sans-ui">{event.significance}</p>
                           </div>
 
                           {/* Tax detail */}

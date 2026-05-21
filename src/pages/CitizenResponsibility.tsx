@@ -265,15 +265,25 @@ function ReasonCard({ reason }: { reason: ReasonSection }) {
             {reason.icon}
           </div>
           <div className="flex-1 min-w-0">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <h3 className="font-bold text-slate-900 dark:text-white text-lg leading-tight">{reason.title}</h3>
-                <p className="text-sm text-amber-700 dark:text-amber-400 mt-0.5">{reason.subtitle}</p>
+            <div className="min-w-0">
+              <div className="flex items-start justify-between gap-2">
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-slate-900 dark:text-white text-base leading-tight">{reason.title}</h3>
+                  <p className="text-sm text-amber-700 dark:text-amber-400 mt-0.5">{reason.subtitle}</p>
+                </div>
+                {/* Desktop stat — right aligned, hidden on mobile to prevent overflow */}
+                {reason.stat && (
+                  <div className="hidden sm:block text-right shrink-0 ml-3 max-w-[120px]">
+                    <p className="text-2xl font-bold text-glory-red leading-none">{reason.stat}</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-tight mt-0.5">{reason.statLabel}</p>
+                  </div>
+                )}
               </div>
+              {/* Mobile stat — shown below title inline */}
               {reason.stat && (
-                <div className="text-right shrink-0">
-                  <p className="text-2xl font-bold text-glory-red">{reason.stat}</p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 max-w-[140px] text-right leading-tight">{reason.statLabel}</p>
+                <div className="flex sm:hidden items-baseline gap-2 mt-1.5 flex-wrap">
+                  <span className="text-lg font-bold text-glory-red">{reason.stat}</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400 leading-tight">{reason.statLabel}</span>
                 </div>
               )}
             </div>
