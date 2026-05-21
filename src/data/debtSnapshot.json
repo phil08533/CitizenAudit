@@ -1,0 +1,18 @@
+{
+  "totalDebt": 33900000000000,
+  "debtPerCitizen": 101200,
+  "annualInterest": 659000000000,
+  "debtToGDP": 1.23,
+  "lastUpdated": "2024-01-15",
+  "historicalDebt": [
+    { "year": 2000, "amount": 5674000000000 },
+    { "year": 2005, "amount": 7932000000000 },
+    { "year": 2010, "amount": 13561000000000 },
+    { "year": 2015, "amount": 18151000000000 },
+    { "year": 2019, "amount": 22720000000000 },
+    { "year": 2020, "amount": 26945000000000 },
+    { "year": 2021, "amount": 28428000000000 },
+    { "year": 2022, "amount": 30929000000000 },
+    { "year": 2023, "amount": 33900000000000 }
+  ]
+}

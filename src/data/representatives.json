@@ -1,0 +1,65 @@
+{
+  "note": "Demo data — real lookup uses Google Civic Information API",
+  "sampleByState": {
+    "CA": [
+      {
+        "name": "Alex Padilla",
+        "party": "D",
+        "chamber": "Senate",
+        "state": "CA",
+        "phone": "(202) 224-3553",
+        "website": "https://www.padilla.senate.gov",
+        "address": "SH-112 Hart Senate Office Building, Washington, DC 20510"
+      },
+      {
+        "name": "Laphonza Butler",
+        "party": "D",
+        "chamber": "Senate",
+        "state": "CA",
+        "phone": "(202) 224-3841",
+        "website": "https://www.butler.senate.gov",
+        "address": "B40C Dirksen Senate Office Building, Washington, DC 20510"
+      }
+    ],
+    "TX": [
+      {
+        "name": "John Cornyn",
+        "party": "R",
+        "chamber": "Senate",
+        "state": "TX",
+        "phone": "(202) 224-2934",
+        "website": "https://www.cornyn.senate.gov",
+        "address": "517 Hart Senate Office Building, Washington, DC 20510"
+      },
+      {
+        "name": "Ted Cruz",
+        "party": "R",
+        "chamber": "Senate",
+        "state": "TX",
+        "phone": "(202) 224-5922",
+        "website": "https://www.cruz.senate.gov",
+        "address": "127A Russell Senate Office Building, Washington, DC 20510"
+      }
+    ],
+    "NY": [
+      {
+        "name": "Chuck Schumer",
+        "party": "D",
+        "chamber": "Senate",
+        "state": "NY",
+        "phone": "(202) 224-6542",
+        "website": "https://www.schumer.senate.gov",
+        "address": "322 Hart Senate Office Building, Washington, DC 20510"
+      },
+      {
+        "name": "Kirsten Gillibrand",
+        "party": "D",
+        "chamber": "Senate",
+        "state": "NY",
+        "phone": "(202) 224-4451",
+        "website": "https://www.gillibrand.senate.gov",
+        "address": "478 Russell Senate Office Building, Washington, DC 20510"
+      }
+    ]
+  }
+}

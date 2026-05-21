@@ -1,0 +1,98 @@
+[
+  {
+    "id": "social_security",
+    "name": "Social Security",
+    "amount": 1354000000000,
+    "percentage": 21.4,
+    "color": "#3b82f6",
+    "description": "Monthly benefits for retirees, disabled workers, and survivors. The largest single federal expenditure."
+  },
+  {
+    "id": "medicare",
+    "name": "Medicare",
+    "amount": 848000000000,
+    "percentage": 13.4,
+    "color": "#10b981",
+    "description": "Health insurance for Americans 65+ and certain disabled individuals. Covers hospital stays, doctor visits, and prescriptions."
+  },
+  {
+    "id": "medicaid",
+    "name": "Medicaid & CHIP",
+    "amount": 616000000000,
+    "percentage": 9.7,
+    "color": "#06b6d4",
+    "description": "Health coverage for low-income Americans including children, pregnant women, elderly, and disabled individuals."
+  },
+  {
+    "id": "defense",
+    "name": "National Defense",
+    "amount": 858000000000,
+    "percentage": 13.6,
+    "color": "#f59e0b",
+    "description": "Military operations, personnel, weapons systems, and national security. Includes DoD and intelligence agencies."
+  },
+  {
+    "id": "debt_interest",
+    "name": "Interest on Debt",
+    "amount": 659000000000,
+    "percentage": 10.4,
+    "color": "#ef4444",
+    "description": "Payments on the national debt. This mandatory expense has grown significantly as interest rates have risen."
+  },
+  {
+    "id": "income_security",
+    "name": "Income Security",
+    "amount": 621000000000,
+    "percentage": 9.8,
+    "color": "#8b5cf6",
+    "description": "SNAP food assistance, housing aid, unemployment insurance, earned income tax credits, and other safety net programs."
+  },
+  {
+    "id": "veterans",
+    "name": "Veterans' Affairs",
+    "amount": 302000000000,
+    "percentage": 4.8,
+    "color": "#f97316",
+    "description": "Healthcare, education, and benefits for military veterans. Includes VA hospitals and disability compensation."
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "amount": 238000000000,
+    "percentage": 3.8,
+    "color": "#ec4899",
+    "description": "Federal student aid, K-12 grants, Head Start, and education research. Most K-12 funding comes from states."
+  },
+  {
+    "id": "transportation",
+    "name": "Transportation & Infrastructure",
+    "amount": 167000000000,
+    "percentage": 2.6,
+    "color": "#14b8a6",
+    "description": "Highways, bridges, airports, rail, and public transit. Includes the Infrastructure Investment and Jobs Act spending."
+  },
+  {
+    "id": "health_research",
+    "name": "Health Research & Public Health",
+    "amount": 98000000000,
+    "percentage": 1.5,
+    "color": "#84cc16",
+    "description": "NIH research grants, CDC operations, FDA oversight, and disease prevention programs."
+  },
+  {
+    "id": "international",
+    "name": "International Affairs",
+    "amount": 72000000000,
+    "percentage": 1.1,
+    "color": "#a855f7",
+    "description": "Foreign aid, diplomatic missions, international development, and global health programs. Less than 1% of the budget."
+  },
+  {
+    "id": "other",
+    "name": "All Other",
+    "amount": 479000000000,
+    "percentage": 7.6,
+    "color": "#94a3b8",
+    "description": "Science, energy, environment, agriculture, justice, general government, and other federal activities."
+  }
+]
