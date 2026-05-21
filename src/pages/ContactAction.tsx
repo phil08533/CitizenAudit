@@ -193,7 +193,7 @@ export function ContactAction() {
     : TEMPLATES.filter(t => t.category === filterCategory)
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
+    <div className="min-h-screen bg-[#f8f7f2] dark:bg-slate-950">
       {/* Header */}
       <section className="hero-gradient stars-bg text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

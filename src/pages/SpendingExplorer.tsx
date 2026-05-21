@@ -46,7 +46,7 @@ export function SpendingExplorer() {
   const filtered = useMemo(() => applyFilter(allAgencies, filter), [filter])
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
+    <div className="min-h-screen bg-[#f8f7f2] dark:bg-slate-950">
       <CategoryDetailPanel category={selectedCategory} onClose={() => setSelectedCategory(null)} />
 
       {/* Header */}
