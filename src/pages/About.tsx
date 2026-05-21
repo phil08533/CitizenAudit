@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { BarChart3, Shield, Globe, Heart, ArrowRight } from 'lucide-react'
+import { FoundingFatherBadge } from '../components/ui/FoundingFatherBadge'
+import { FOUNDING_FATHERS } from '../data/foundingFathers'
 
 const PRINCIPLES = [
   {
@@ -31,20 +33,30 @@ const PRINCIPLES = [
 
 export function About() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
       {/* Header */}
-      <section className="bg-gradient-to-r from-slate-700 to-slate-900 text-white py-14">
+      <section className="hero-gradient stars-bg text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl font-bold mb-3">About Citizen Audit</h1>
-            <p className="text-slate-300 max-w-xl text-lg">
-              A free, open-source civic transparency tool that puts government spending data in your hands.
-            </p>
+            <div className="flex flex-col lg:flex-row items-start gap-8 justify-between">
+              <div className="flex-1">
+                <h1 className="text-4xl font-bold font-serif mb-3">About Citizen Audit</h1>
+                <p className="text-white/75 max-w-xl text-lg">
+                  A free, open-source civic transparency tool that puts government spending data in your hands.
+                </p>
+              </div>
+              <div className="hidden lg:block">
+                <FoundingFatherBadge father={FOUNDING_FATHERS.about} variant="hero" />
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="lg:hidden">
+          <FoundingFatherBadge father={FOUNDING_FATHERS.about} variant="sidebar" />
+        </motion.div>
         {/* Mission */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}

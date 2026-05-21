@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { BarChart3, AlertTriangle, ChevronRight } from 'lucide-react'
+import { FoundingFatherBadge } from '../components/ui/FoundingFatherBadge'
+import { FOUNDING_FATHERS } from '../data/foundingFathers'
 import { AgencyCard } from '../components/cards/AgencyCard'
 import { SearchFilter } from '../components/ui/SearchFilter'
 import { SpendingPieChart } from '../components/charts/SpendingPieChart'
@@ -44,24 +46,29 @@ export function SpendingExplorer() {
   const filtered = useMemo(() => applyFilter(allAgencies, filter), [filter])
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
       <CategoryDetailPanel category={selectedCategory} onClose={() => setSelectedCategory(null)} />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-14">
+      <section className="hero-gradient stars-bg text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                <BarChart3 className="w-5 h-5" />
+            <div className="flex items-start justify-between gap-8">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center">
+                    <BarChart3 className="w-5 h-5" />
+                  </div>
+                  <h1 className="text-3xl font-bold font-serif">Spending Explorer</h1>
+                </div>
+                <p className="text-white/75 max-w-2xl mb-4">
+                  All {spending.length} spending categories with subcategories, leadership, and fraud estimates.
+                  Total FY 2023: <strong className="text-white">{formatCurrency(totalBudget, true)}</strong> ·
+                  Est. fraud/waste: <strong className="text-red-300">{formatCurrency(totalFraud, true)}</strong>
+                </p>
+                <FoundingFatherBadge father={FOUNDING_FATHERS.spending} variant="compact" />
               </div>
-              <h1 className="text-3xl font-bold">Spending Explorer</h1>
             </div>
-            <p className="text-purple-100 max-w-2xl">
-              All {spending.length} spending categories with subcategories, leadership, and fraud estimates.
-              Total FY 2023: <strong className="text-white">{formatCurrency(totalBudget, true)}</strong> ·
-              Est. fraud/waste: <strong className="text-red-300">{formatCurrency(totalFraud, true)}</strong>
-            </p>
           </motion.div>
         </div>
       </section>
@@ -86,7 +93,7 @@ export function SpendingExplorer() {
               onClick={() => setActiveTab(tab)}
               className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors capitalize ${
                 activeTab === tab
-                  ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25'
+                  ? 'bg-glory-blue text-white shadow-lg shadow-black/20'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700'
               }`}
             >

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Calculator, Info, ExternalLink } from 'lucide-react'
 import { TaxCalculator } from '../components/forms/TaxCalculator'
+import { FoundingFatherBadge } from '../components/ui/FoundingFatherBadge'
+import { FOUNDING_FATHERS } from '../data/foundingFathers'
 import { formatCurrency } from '../utils/formatters'
 import type { TaxResult } from '../types'
 
@@ -9,18 +11,18 @@ export function TaxEstimator() {
   const [result, setResult] = useState<TaxResult | null>(null)
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f2' }}>
       {/* Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-14">
+      <section className="hero-gradient stars-bg text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center">
                 <Calculator className="w-5 h-5" />
               </div>
-              <h1 className="text-3xl font-bold">Tax Estimator</h1>
+              <h1 className="text-3xl font-bold font-serif">Tax Estimator</h1>
             </div>
-            <p className="text-blue-100 max-w-xl">
+            <p className="text-white/75 max-w-xl">
               Enter your income details to see an estimated breakdown of how your federal taxes are spent across government programs.
             </p>
           </motion.div>
@@ -46,12 +48,17 @@ export function TaxEstimator() {
 
           {/* Sidebar */}
           <div className="space-y-6">
+            {/* Founding Father Badge */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.15 }}>
+              <FoundingFatherBadge father={FOUNDING_FATHERS.taxEstimator} variant="sidebar" />
+            </motion.div>
+
             {/* Context card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="rounded-2xl border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/30 p-5"
+              className="rounded-2xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 p-5"
             >
               <div className="flex items-center gap-2 mb-3">
                 <Info className="w-4 h-4 text-blue-500" />
