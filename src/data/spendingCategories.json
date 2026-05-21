@@ -3,96 +3,2172 @@
     "id": "social_security",
     "name": "Social Security",
     "amount": 1354000000000,
-    "percentage": 21.4,
+    "percentage": 22.1,
     "color": "#3b82f6",
-    "description": "Monthly benefits for retirees, disabled workers, and survivors. The largest single federal expenditure."
+    "description": "Monthly benefits for retirees, disabled workers, and survivors. The largest single federal expenditure, serving over 72 million Americans.",
+    "lead": "Martin O'Malley",
+    "leadTitle": "Commissioner, Social Security Administration",
+    "leadWebsite": "https://www.ssa.gov",
+    "spendingItems": [
+      "Retirement benefits averaging $1,907/month to 57.8M retirees",
+      "Disability Insurance (SSDI) to 8.7M disabled workers",
+      "Survivor benefits to 5.8M widows, widowers, and children",
+      "SSA administrative operations across 1,200+ field offices",
+      "IT systems for benefit calculations and claims processing"
+    ],
+    "fraudEstimate": {
+      "amount": 8100000000,
+      "percentage": 0.6,
+      "source": "SSA Office of Inspector General FY2023 Annual Report",
+      "examples": [
+        "Disability fraud — working while collecting SSDI (~$4B estimated)",
+        "Payments to deceased beneficiaries ($170M annually recovered)",
+        "Payments to prisoners who should be suspended ($65M/year)",
+        "Identity theft and fraudulent applications ($800M+)"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "oasi",
+        "name": "Old Age & Survivors Insurance (OASI)",
+        "amount": 1158000000000,
+        "lead": "SSA Commissioner's Office",
+        "leadTitle": "Social Security Administration",
+        "description": "Retirement and survivor benefits — the core Social Security program, funded by FICA payroll taxes.",
+        "spendingItems": [
+          "Monthly retirement checks to 57.8M retirees and dependents",
+          "Survivor benefits to widows/widowers and minor children",
+          "Spousal benefits (up to 50% of worker's benefit)",
+          "Lump-sum death payments of $255"
+        ],
+        "fraudEstimate": {
+          "amount": 2100000000,
+          "percentage": 0.18,
+          "source": "SSA OIG 2023",
+          "examples": ["Payments to unreported deceased ($1.1B)", "Concurrent benefit fraud"]
+        }
+      },
+      {
+        "id": "ssdi",
+        "name": "Disability Insurance (SSDI)",
+        "amount": 153000000000,
+        "lead": "Office of Disability Adjudication and Review",
+        "leadTitle": "Social Security Administration",
+        "description": "Monthly payments to workers who become disabled before retirement age and cannot perform substantial work.",
+        "spendingItems": [
+          "Monthly payments averaging $1,489 to 8.7M disabled workers",
+          "Benefits to disabled workers' families and dependents",
+          "Continuing disability reviews (CDRs) — evaluating ongoing eligibility",
+          "Vocational rehabilitation services and work incentive programs"
+        ],
+        "fraudEstimate": {
+          "amount": 5400000000,
+          "percentage": 3.5,
+          "source": "SSA OIG; GAO-15-514",
+          "examples": [
+            "Working while claiming total disability",
+            "Fraudulent medical evidence from 'disability mills'",
+            "Attorney fraud in claims filing (Operation Hidden Treasure)",
+            "Examiners approving improper claims — 'Huntington, WV scandal' cost $2.5B+"
+          ]
+        }
+      },
+      {
+        "id": "ssa_admin",
+        "name": "SSA Administration",
+        "amount": 13000000000,
+        "lead": "Deputy Commissioner for Budget, Finance & Management",
+        "leadTitle": "Social Security Administration",
+        "description": "Operating costs for SSA's 60,000 employees, field offices, and technology systems.",
+        "spendingItems": [
+          "Salaries for ~60,000 SSA employees",
+          "1,230 field offices nationwide",
+          "IT modernization of legacy COBOL systems (60+ years old)",
+          "Telephone and online claims processing",
+          "Anti-fraud investigations"
+        ],
+        "fraudEstimate": {
+          "amount": 600000000,
+          "percentage": 4.6,
+          "source": "SSA OIG Contract Audits",
+          "examples": ["IT contractor overcharges", "Improper vendor payments"]
+        }
+      }
+    ]
   },
   {
     "id": "medicare",
     "name": "Medicare",
     "amount": 848000000000,
-    "percentage": 13.4,
+    "percentage": 13.8,
     "color": "#10b981",
-    "description": "Health insurance for Americans 65+ and certain disabled individuals. Covers hospital stays, doctor visits, and prescriptions."
+    "description": "Federal health insurance for 65+ Americans and certain disabled individuals. Covers hospital, outpatient, and prescription drug costs.",
+    "lead": "Dr. Meena Seshamani",
+    "leadTitle": "Deputy Administrator & Director, Center for Medicare, CMS",
+    "leadWebsite": "https://www.cms.gov",
+    "spendingItems": [
+      "Hospital inpatient care (Part A) for 34M+ beneficiaries",
+      "Outpatient doctor visits, labs, durable equipment (Part B)",
+      "Prescription drug coverage (Part D)",
+      "Medicare Advantage private plan subsidies (Part C)",
+      "Graduate medical education payments to teaching hospitals",
+      "Disproportionate share payments to safety-net hospitals"
+    ],
+    "fraudEstimate": {
+      "amount": 60000000000,
+      "percentage": 7.1,
+      "source": "CMS Improper Payment Report FY2023; HHS OIG",
+      "examples": [
+        "Billing for services never rendered (~$28B estimated annually)",
+        "Upcoding — billing for more expensive procedures than performed",
+        "Phantom billing by ghost clinics and DME suppliers",
+        "COVID-19 telehealth fraud schemes ($2B+ charged)",
+        "Lab test kickback schemes ($6B Operation Brace Yourself)"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "medicare_advantage",
+        "name": "Medicare Advantage (Part C)",
+        "amount": 399000000000,
+        "lead": "Center for Medicare & Medicaid Services",
+        "leadTitle": "CMS",
+        "description": "Payments to private insurance companies to provide Medicare benefits to enrolled seniors.",
+        "spendingItems": [
+          "Capitated payments to 500+ approved private insurers",
+          "Risk adjustment payments based on beneficiary health status",
+          "Quality bonus payments to high-rated plans",
+          "Star ratings administration and oversight"
+        ],
+        "fraudEstimate": {
+          "amount": 25000000000,
+          "percentage": 6.3,
+          "source": "HHS OIG; CMS Risk Adjustment Audits",
+          "examples": [
+            "Risk score inflation — insurers exaggerating patient illness to get higher payments",
+            "Chart-chase audits finding $4.2B overbilling by UnitedHealth, Humana, others",
+            "Phantom diagnoses added without supporting medical records"
+          ]
+        }
+      },
+      {
+        "id": "medicare_part_a",
+        "name": "Medicare Part A — Hospital Insurance",
+        "amount": 219000000000,
+        "lead": "CMS Center for Medicare",
+        "leadTitle": "Centers for Medicare & Medicaid Services",
+        "description": "Covers inpatient hospital stays, skilled nursing facilities, hospice, and some home health care.",
+        "spendingItems": [
+          "Inpatient hospital admissions (DRG-based payments)",
+          "Skilled nursing facility stays post-hospitalization",
+          "Hospice care for terminally ill patients",
+          "Home health services following hospitalizations"
+        ],
+        "fraudEstimate": {
+          "amount": 15000000000,
+          "percentage": 6.8,
+          "source": "CMS FY2023 Improper Payment Rate",
+          "examples": [
+            "Unnecessary inpatient admissions when outpatient would suffice",
+            "Hospice fraud — enrolling non-terminal patients for higher reimbursement",
+            "SNF billing for patients not meeting 3-day hospital requirement"
+          ]
+        }
+      },
+      {
+        "id": "medicare_part_b",
+        "name": "Medicare Part B — Medical Insurance",
+        "amount": 173000000000,
+        "lead": "CMS Center for Medicare",
+        "leadTitle": "Centers for Medicare & Medicaid Services",
+        "description": "Covers outpatient care, doctor visits, preventive services, lab tests, and durable medical equipment.",
+        "spendingItems": [
+          "Physician and surgeon fees for office and outpatient visits",
+          "Durable medical equipment (wheelchairs, oxygen, CPAP)",
+          "Lab tests, imaging, and diagnostic services",
+          "Ambulance transportation",
+          "Preventive care: annual wellness visits, screenings, vaccines"
+        ],
+        "fraudEstimate": {
+          "amount": 12000000000,
+          "percentage": 6.9,
+          "source": "CMS; DOJ Healthcare Fraud Strike Force data",
+          "examples": [
+            "Phantom billing for equipment never delivered ($2B+ annually)",
+            "Back brace and DME kickback schemes ($6B Operation Brace Yourself)",
+            "Upcoded evaluation codes (billing 99215 for routine visits)"
+          ]
+        }
+      },
+      {
+        "id": "medicare_part_d",
+        "name": "Medicare Part D — Prescription Drugs",
+        "amount": 57000000000,
+        "lead": "CMS Center for Medicare",
+        "leadTitle": "Centers for Medicare & Medicaid Services",
+        "description": "Prescription drug coverage provided through private plan sponsors, subsidized by Medicare.",
+        "spendingItems": [
+          "Subsidies to Part D plan sponsors (PDPs and MA-PD plans)",
+          "Low-income subsidy (Extra Help) for eligible beneficiaries",
+          "Catastrophic coverage payments",
+          "Drug manufacturer rebate program administration"
+        ],
+        "fraudEstimate": {
+          "amount": 8000000000,
+          "percentage": 14.0,
+          "source": "HHS OIG; GAO-22-105055",
+          "examples": [
+            "Pharmacy billing for drugs not dispensed",
+            "Pill mill prescribers enabling opioid diversion",
+            "Duplicate billing across multiple Part D plans"
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "medicaid",
     "name": "Medicaid & CHIP",
     "amount": 616000000000,
-    "percentage": 9.7,
+    "percentage": 10.0,
     "color": "#06b6d4",
-    "description": "Health coverage for low-income Americans including children, pregnant women, elderly, and disabled individuals."
+    "description": "Health coverage for 90M+ low-income Americans including children, pregnant women, elderly, and people with disabilities. Jointly funded by federal and state governments.",
+    "lead": "Daniel Tsai",
+    "leadTitle": "Deputy Administrator & Director, Center for Medicaid and CHIP, CMS",
+    "leadWebsite": "https://www.medicaid.gov",
+    "spendingItems": [
+      "Federal matching funds to all 50 states + DC for Medicaid",
+      "Long-term care for elderly and disabled in nursing facilities",
+      "Children's Health Insurance Program (CHIP) for uninsured children",
+      "ACA expansion coverage for low-income adults",
+      "Behavioral health and substance use disorder treatment",
+      "Home and community-based waiver services"
+    ],
+    "fraudEstimate": {
+      "amount": 100000000000,
+      "percentage": 16.2,
+      "source": "CMS FY2023 Improper Payment Rate; HHS OIG",
+      "examples": [
+        "Enrollees who don't meet income/eligibility requirements",
+        "Personal care fraud — billing for services not rendered ($8B+ annually)",
+        "Provider billing for deceased Medicaid recipients",
+        "Phantom provider schemes — billing for non-existent services",
+        "MCO (managed care) capitation overpayments to insurers ($25B est.)"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "medicaid_federal_match",
+        "name": "Medicaid Federal Match (FMAP)",
+        "amount": 555000000000,
+        "lead": "State Medicaid Agencies (Federal match via CMS)",
+        "leadTitle": "Centers for Medicare & Medicaid Services + All 50 States",
+        "description": "Federal share of Medicaid spending, matched to state spending. Federal match ranges from 50% to 83% depending on state income levels.",
+        "spendingItems": [
+          "Acute care — doctor visits, ER, hospital inpatient",
+          "Long-term services and supports (nursing homes, home care)",
+          "Managed care organization capitation payments",
+          "Prescription drugs for enrollees",
+          "Behavioral health and mental health services"
+        ],
+        "fraudEstimate": {
+          "amount": 95000000000,
+          "percentage": 17.1,
+          "source": "CMS PERM measurement; HHS OIG FY2023",
+          "examples": [
+            "Home health and personal care aides billing for no-shows",
+            "MCO risk score manipulation",
+            "Eligibility fraud — earning over limits while enrolled"
+          ]
+        }
+      },
+      {
+        "id": "chip",
+        "name": "Children's Health Insurance Program (CHIP)",
+        "amount": 22000000000,
+        "lead": "State CHIP Agencies",
+        "leadTitle": "CMS & State Health Departments",
+        "description": "Low-cost health coverage for children in families who earn too much to qualify for Medicaid but can't afford private insurance.",
+        "spendingItems": [
+          "Doctor visits and well-child care for 7M+ children",
+          "Dental and vision coverage",
+          "Emergency services",
+          "Outreach and enrollment assistance"
+        ],
+        "fraudEstimate": {
+          "amount": 1300000000,
+          "percentage": 5.9,
+          "source": "CMS CHIP Improper Payments",
+          "examples": ["Eligibility errors", "Provider billing irregularities"]
+        }
+      }
+    ]
   },
   {
     "id": "defense",
     "name": "National Defense",
     "amount": 858000000000,
-    "percentage": 13.6,
+    "percentage": 14.0,
     "color": "#f59e0b",
-    "description": "Military operations, personnel, weapons systems, and national security. Includes DoD and intelligence agencies."
+    "description": "Military operations, personnel, weapons systems, and national security. Includes the Department of Defense, nuclear weapons programs, and intelligence agencies.",
+    "lead": "Lloyd Austin",
+    "leadTitle": "Secretary of Defense",
+    "leadWebsite": "https://www.defense.gov",
+    "spendingItems": [
+      "Pay and benefits for 1.3M active duty military personnel",
+      "Operations and maintenance of military equipment and bases",
+      "Procurement of aircraft, ships, vehicles, and weapons",
+      "Research and development of next-generation systems",
+      "Military construction and family housing",
+      "Nuclear weapons programs (NNSA/DOE)",
+      "Defense intelligence: NSA, DIA, NRO, NGA"
+    ],
+    "fraudEstimate": {
+      "amount": 25000000000,
+      "percentage": 2.9,
+      "source": "DoD OIG Annual Report FY2023; GAO Defense Reports",
+      "examples": [
+        "Contractor overbilling and cost mischarging ($2B+ detected annually)",
+        "DoD has NEVER passed a full financial audit (6 failed attempts since 2018)",
+        "F-35 program: $1.7T lifetime cost, years behind schedule, persistent defects",
+        "Spare parts price gouging — Pentagon paid $14,000 for a $50 part",
+        "Housing allowance fraud by service members",
+        "Counterfeit parts in military equipment supply chains"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "defense_personnel",
+        "name": "Military Personnel",
+        "amount": 192000000000,
+        "lead": "Under Secretary of Defense for Personnel & Readiness",
+        "leadTitle": "Department of Defense",
+        "description": "Pay, allowances, bonuses, and benefits for all active-duty military members.",
+        "spendingItems": [
+          "Base pay for 1.3M active duty members",
+          "Housing and subsistence allowances",
+          "Special pays (combat, flight, hazardous duty)",
+          "Enlistment and retention bonuses",
+          "Military retirement contributions"
+        ],
+        "fraudEstimate": {
+          "amount": 1200000000,
+          "percentage": 0.6,
+          "source": "DoD OIG 2023",
+          "examples": ["BAH (housing allowance) fraud — falsifying dependents", "Ghost pay and AWOL collection"]
+        }
+      },
+      {
+        "id": "defense_om",
+        "name": "Operations & Maintenance",
+        "amount": 319000000000,
+        "lead": "Under Secretary of Defense (Comptroller)",
+        "leadTitle": "Department of Defense",
+        "description": "Day-to-day costs of running the military: training, equipment maintenance, base operations, and logistics.",
+        "spendingItems": [
+          "Base operations (utilities, facilities, services)",
+          "Aircraft, ship, and vehicle maintenance",
+          "Military training and readiness programs",
+          "Transportation and logistics (TRANSCOM)",
+          "Civilian DoD employee salaries (~750,000 civilians)",
+          "Defense contracts for support services"
+        ],
+        "fraudEstimate": {
+          "amount": 12000000000,
+          "percentage": 3.8,
+          "source": "DoD OIG; POGO defense contractor database",
+          "examples": [
+            "Contractor labor mischarging ($500M+ per year detected)",
+            "Phantom services billed on LOGCAP contracts in Afghanistan",
+            "Defective pricing by major contractors (DCAA audits)"
+          ]
+        }
+      },
+      {
+        "id": "defense_procurement",
+        "name": "Procurement",
+        "amount": 153000000000,
+        "lead": "Under Secretary of Defense for Acquisition",
+        "leadTitle": "Department of Defense",
+        "description": "Buying weapons systems, aircraft, ships, vehicles, ammunition, and other military equipment.",
+        "spendingItems": [
+          "Aircraft: F-35, F-18, C-17, helicopters ($40B+)",
+          "Shipbuilding: destroyers, submarines, carriers ($30B+)",
+          "Missiles and munitions ($25B+)",
+          "Ground vehicles, trucks, HUMVEES",
+          "Satellites and space systems",
+          "IT systems and cybersecurity tools"
+        ],
+        "fraudEstimate": {
+          "amount": 8000000000,
+          "percentage": 5.2,
+          "source": "DoD OIG; GAO defense acquisition reports",
+          "examples": [
+            "F-35 program: $13B in cost overruns since inception",
+            "LCS (Littoral Combat Ship): $5B over budget, program cancelled",
+            "Sole-source contracts enabling price gouging by Lockheed, Raytheon, Boeing"
+          ]
+        }
+      },
+      {
+        "id": "defense_rdt",
+        "name": "Research, Development, Test & Evaluation",
+        "amount": 128000000000,
+        "lead": "Under Secretary of Defense for Research & Engineering",
+        "leadTitle": "Department of Defense",
+        "description": "Funding for basic research through weapons system development and testing.",
+        "spendingItems": [
+          "Basic and applied defense research at universities and labs",
+          "Advanced technology development (AI, hypersonics, directed energy)",
+          "System development and demonstration for new weapons",
+          "Operational system development",
+          "Defense Advanced Research Projects Agency (DARPA)"
+        ],
+        "fraudEstimate": {
+          "amount": 3500000000,
+          "percentage": 2.7,
+          "source": "DoD OIG R&D Audits",
+          "examples": [
+            "Cost overruns on developmental programs ($2B+ per year)",
+            "Contractor IP theft and misappropriation",
+            "Duplication of R&D across services"
+          ]
+        }
+      },
+      {
+        "id": "defense_nuclear",
+        "name": "Nuclear Weapons & Defense (NNSA)",
+        "amount": 27000000000,
+        "lead": "Jill Hruby",
+        "leadTitle": "Administrator, National Nuclear Security Administration",
+        "description": "Nuclear weapons maintenance, modernization, and nonproliferation programs under the Department of Energy.",
+        "spendingItems": [
+          "Maintenance and modernization of the U.S. nuclear stockpile",
+          "Nuclear weapons labs: Sandia, Los Alamos, Lawrence Livermore",
+          "Nuclear nonproliferation programs",
+          "Naval reactor design for submarines and carriers",
+          "Environmental cleanup at former nuclear weapons sites"
+        ],
+        "fraudEstimate": {
+          "amount": 1500000000,
+          "percentage": 5.6,
+          "source": "DOE OIG; NNSA audits",
+          "examples": [
+            "Plutonium facility (CMRR) cancelled after $700M spent",
+            "Contractor mismanagement at DOE sites costing billions in overruns"
+          ]
+        }
+      },
+      {
+        "id": "defense_intel",
+        "name": "Defense Intelligence Agencies",
+        "amount": 24000000000,
+        "lead": "Director of National Intelligence",
+        "leadTitle": "Office of the Director of National Intelligence",
+        "description": "Classified programs for NSA signals intelligence, NRO satellite reconnaissance, NGA geospatial analysis, and DIA military intelligence.",
+        "spendingItems": [
+          "NSA — global signals intelligence and cybersecurity",
+          "NRO — spy satellite constellation",
+          "NGA — geospatial intelligence mapping",
+          "DIA — military intelligence analysis",
+          "Classified cyber offensive and defensive operations"
+        ],
+        "fraudEstimate": {
+          "amount": 900000000,
+          "percentage": 3.8,
+          "source": "ICIG; classified budget leak data (Snowden documents)",
+          "examples": [
+            "Contractor security clearance fraud (e.g., NavySea background check scandal)",
+            "Cost overruns on classified satellite programs"
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "debt_interest",
     "name": "Interest on Debt",
     "amount": 659000000000,
-    "percentage": 10.4,
+    "percentage": 10.7,
     "color": "#ef4444",
-    "description": "Payments on the national debt. This mandatory expense has grown significantly as interest rates have risen."
+    "description": "Mandatory payments on the $33.9 trillion national debt. Now exceeds the entire defense budget. Will continue growing as debt and interest rates remain elevated.",
+    "lead": "Janet Yellen",
+    "leadTitle": "Secretary of the Treasury",
+    "leadWebsite": "https://home.treasury.gov",
+    "spendingItems": [
+      "Interest on Treasury bonds held by the public ($550B)",
+      "Interest on intragovernmental debt (Social Security Trust Fund, etc.) ($109B)",
+      "Payments to foreign debt holders — China ($800B), Japan ($1.1T)",
+      "Payments to Federal Reserve, mutual funds, pension funds, individuals"
+    ],
+    "fraudEstimate": {
+      "amount": 0,
+      "percentage": 0,
+      "source": "N/A — debt service is a contractual obligation with no fraud component",
+      "examples": [
+        "Note: The waste here is political, not fraudulent — decades of deficit spending created this mandatory expense",
+        "Every dollar of interest is money NOT spent on services Americans use"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "interest_public",
+        "name": "Interest to Public Creditors",
+        "amount": 550000000000,
+        "lead": "Bureau of the Fiscal Service",
+        "leadTitle": "U.S. Department of the Treasury",
+        "description": "Interest paid to individuals, corporations, foreign governments, and the Federal Reserve who hold U.S. Treasury securities.",
+        "spendingItems": [
+          "Treasury Notes (2-10 year) coupon payments",
+          "Treasury Bonds (10-30 year) coupon payments",
+          "Treasury Bills (< 1 year) interest",
+          "TIPS (inflation-protected securities) interest",
+          "Savings bond redemptions"
+        ],
+        "fraudEstimate": { "amount": 0, "percentage": 0, "source": "N/A", "examples": [] }
+      },
+      {
+        "id": "interest_intragovernmental",
+        "name": "Intragovernmental Interest",
+        "amount": 109000000000,
+        "lead": "Bureau of the Fiscal Service",
+        "leadTitle": "U.S. Department of the Treasury",
+        "description": "Interest paid to federal trust funds that have lent money to the general fund, primarily Social Security and Medicare.",
+        "spendingItems": [
+          "Social Security Trust Fund interest (~$65B)",
+          "Medicare Hospital Insurance Trust Fund interest (~$7B)",
+          "Military and civil service retirement trust funds",
+          "Highway, airport, and other special-purpose fund interest"
+        ],
+        "fraudEstimate": { "amount": 0, "percentage": 0, "source": "N/A", "examples": [] }
+      }
+    ]
   },
   {
     "id": "income_security",
     "name": "Income Security",
     "amount": 621000000000,
-    "percentage": 9.8,
+    "percentage": 10.1,
     "color": "#8b5cf6",
-    "description": "SNAP food assistance, housing aid, unemployment insurance, earned income tax credits, and other safety net programs."
+    "description": "Safety net programs providing food, housing, and income support to low-income Americans, disabled individuals, and families in need.",
+    "lead": "Xavier Becerra / Various Agencies",
+    "leadTitle": "Multiple Departments: HHS, USDA, HUD, Treasury",
+    "leadWebsite": "https://www.benefits.gov",
+    "spendingItems": [
+      "SNAP food assistance to 41M Americans ($120B)",
+      "Supplemental Security Income (SSI) to disabled/elderly poor",
+      "Earned Income Tax Credit refundable payments",
+      "Child Tax Credit refundable payments",
+      "Federal housing assistance (Section 8, public housing)",
+      "Unemployment insurance federal share",
+      "TANF (welfare) block grants to states",
+      "Child nutrition programs (school meals)"
+    ],
+    "fraudEstimate": {
+      "amount": 60000000000,
+      "percentage": 9.7,
+      "source": "OMB Improper Payments Report FY2023; USDA OIG; GAO",
+      "examples": [
+        "EITC improper payments: $17.4B annually (31% error/fraud rate — IRS estimate)",
+        "Unemployment fraud during COVID: $135B paid to ineligible claimants (DOL estimate)",
+        "SNAP trafficking — retailers exchanging EBT for cash at discount",
+        "SSI recipients exceeding asset limits (~$4B)",
+        "Rental assistance fraud — unreported income from tenants and landlords"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "snap",
+        "name": "SNAP (Food Stamps)",
+        "amount": 120000000000,
+        "lead": "Cynthia Long",
+        "leadTitle": "Administrator, Food and Nutrition Service, USDA",
+        "description": "Supplemental Nutrition Assistance Program provides monthly benefits via EBT card for food purchases to 41M low-income Americans.",
+        "spendingItems": [
+          "Monthly EBT benefit averaging $212/person",
+          "State administration cost share",
+          "Employment and training programs for recipients",
+          "Nutrition education"
+        ],
+        "fraudEstimate": {
+          "amount": 8000000000,
+          "percentage": 6.7,
+          "source": "USDA FNS Payment Integrity Report FY2023",
+          "examples": [
+            "SNAP trafficking (exchanging benefits for cash) — $1.3B/year detected",
+            "Eligibility fraud — unreported income or assets",
+            "Retailer fraud — phantom transactions"
+          ]
+        }
+      },
+      {
+        "id": "eitc",
+        "name": "Earned Income Tax Credit (EITC)",
+        "amount": 77000000000,
+        "lead": "IRS Commissioner",
+        "leadTitle": "Internal Revenue Service",
+        "description": "Refundable tax credit for low-to-moderate income workers. One of the largest anti-poverty programs, delivering $77B in refundable credits.",
+        "spendingItems": [
+          "Refundable credits to 23M+ qualifying households",
+          "Maximum credit of $7,430 for families with 3+ children",
+          "IRS enforcement and compliance programs"
+        ],
+        "fraudEstimate": {
+          "amount": 17400000000,
+          "percentage": 22.6,
+          "source": "IRS FY2023 Improper Payment Report",
+          "examples": [
+            "Claiming children who don't qualify or don't exist",
+            "Inflated self-employment income to maximize credit",
+            "Paid preparer fraud — filing false EITC claims for kickbacks"
+          ]
+        }
+      },
+      {
+        "id": "housing_assistance",
+        "name": "Federal Housing Assistance",
+        "amount": 72000000000,
+        "lead": "Adrianne Todman",
+        "leadTitle": "Acting Secretary, HUD",
+        "description": "Section 8 housing vouchers, public housing, and project-based rental assistance helping low-income families afford decent housing.",
+        "spendingItems": [
+          "Section 8 Housing Choice Vouchers (2.3M households)",
+          "Project-based rental assistance contracts",
+          "Public housing operating and capital funds",
+          "Homeless assistance grants (McKinney-Vento)"
+        ],
+        "fraudEstimate": {
+          "amount": 4200000000,
+          "percentage": 5.8,
+          "source": "HUD OIG Annual Report FY2023",
+          "examples": [
+            "Unreported income by tenants ($1.5B+)",
+            "Fraudulent landlord billing for uninspected units",
+            "Ineligible recipients remaining on program after income increases"
+          ]
+        }
+      },
+      {
+        "id": "unemployment",
+        "name": "Unemployment Insurance",
+        "amount": 26000000000,
+        "lead": "Julie Su",
+        "leadTitle": "Acting Secretary of Labor",
+        "description": "Federal-state partnership providing temporary income replacement to workers who lose jobs through no fault of their own.",
+        "spendingItems": [
+          "Extended benefits federal share during high unemployment",
+          "Federal Unemployment Tax (FUTA) administrative grants to states",
+          "Reed Act distributions",
+          "UI modernization and fraud prevention grants"
+        ],
+        "fraudEstimate": {
+          "amount": 18000000000,
+          "percentage": 69.2,
+          "source": "DOL OIG; GAO-23-105521 (elevated post-COVID)",
+          "examples": [
+            "COVID-era fraud: $135B total paid to ineligible claimants (2020-2023)",
+            "Organized fraud rings using stolen identities (Operation Heist)",
+            "Continued work while claiming UI",
+            "State systems exploited due to outdated COBOL technology"
+          ]
+        }
+      },
+      {
+        "id": "ssi",
+        "name": "Supplemental Security Income (SSI)",
+        "amount": 61000000000,
+        "lead": "SSA Commissioner",
+        "leadTitle": "Social Security Administration",
+        "description": "Monthly payments to disabled adults and children and elderly (65+) with very limited income and resources.",
+        "spendingItems": [
+          "Monthly cash payments (max $943/individual, $1,415/couple in 2024)",
+          "Eligibility determination and case management",
+          "Continuing disability reviews"
+        ],
+        "fraudEstimate": {
+          "amount": 4800000000,
+          "percentage": 7.9,
+          "source": "SSA OIG FY2023",
+          "examples": [
+            "Concealed assets (savings, property) exceeding $2,000 limit",
+            "Unreported wages or other income",
+            "Failure to report household composition changes"
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "veterans",
     "name": "Veterans' Affairs",
     "amount": 302000000000,
-    "percentage": 4.8,
+    "percentage": 4.9,
     "color": "#f97316",
-    "description": "Healthcare, education, and benefits for military veterans. Includes VA hospitals and disability compensation."
+    "description": "Healthcare, education, and benefits for 19M U.S. veterans. VA operates the nation's largest integrated healthcare system.",
+    "lead": "Denis McDonough",
+    "leadTitle": "Secretary of Veterans Affairs",
+    "leadWebsite": "https://www.va.gov",
+    "spendingItems": [
+      "Disability compensation to 5.7M veterans",
+      "VA healthcare for 9M enrolled veterans (171 medical centers)",
+      "GI Bill education benefits",
+      "VA home loan guarantees",
+      "Pension for wartime veterans with low income",
+      "Vocational rehabilitation (VR&E program)"
+    ],
+    "fraudEstimate": {
+      "amount": 5200000000,
+      "percentage": 1.7,
+      "source": "VA OIG Annual Report FY2023; GAO",
+      "examples": [
+        "Disability rating fraud — exaggerating or fabricating conditions",
+        "GI Bill fraud — schools enrolling unqualified veterans for tuition",
+        "Pension fraud — concealing assets or income ($400M+ annually)",
+        "Community Care billing irregularities ($1B+ in questioned costs)"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "va_disability",
+        "name": "Disability Compensation",
+        "amount": 138000000000,
+        "lead": "Under Secretary for Benefits",
+        "leadTitle": "Veterans Benefits Administration, VA",
+        "description": "Monthly tax-free payments to veterans for service-connected disabilities. Average payment: $1,900/month.",
+        "spendingItems": [
+          "Monthly payments rated 10%-100% disability",
+          "Dependency and Indemnity Compensation (DIC) for survivors",
+          "Special monthly compensation for severe disabilities",
+          "Clothing allowances and adaptive equipment"
+        ],
+        "fraudEstimate": {
+          "amount": 2800000000,
+          "percentage": 2.0,
+          "source": "VA OIG; GAO-22-104835",
+          "examples": [
+            "Fraudulent disability claims — fabricating or exaggerating injuries",
+            "Veterans concealing VA employment that should reduce benefits",
+            "C&P exam manipulation"
+          ]
+        }
+      },
+      {
+        "id": "va_healthcare",
+        "name": "VA Healthcare System",
+        "amount": 105000000000,
+        "lead": "Dr. Shereef Elnahal",
+        "leadTitle": "Under Secretary for Health, VA",
+        "description": "Medical care for 9M enrolled veterans at 171 VA Medical Centers and 1,100+ outpatient clinics nationwide.",
+        "spendingItems": [
+          "Inpatient hospital care at VA medical centers",
+          "Outpatient primary and specialty care",
+          "Mental health and PTSD treatment",
+          "Community Care Network — private sector care for veterans",
+          "Caregiver support programs",
+          "Prosthetics and sensory aids"
+        ],
+        "fraudEstimate": {
+          "amount": 1800000000,
+          "percentage": 1.7,
+          "source": "VA OIG FY2023; Community Care audits",
+          "examples": [
+            "Community Care overbilling by private providers ($800M+ questioned)",
+            "Supply chain and procurement irregularities",
+            "Employee time and attendance fraud"
+          ]
+        }
+      },
+      {
+        "id": "va_education",
+        "name": "GI Bill & Education",
+        "amount": 15000000000,
+        "lead": "Under Secretary for Benefits",
+        "leadTitle": "Veterans Benefits Administration",
+        "description": "Education and training benefits under Chapter 33 (Post-9/11 GI Bill) and other programs covering tuition, housing, and supplies.",
+        "spendingItems": [
+          "Tuition and fees paid directly to schools",
+          "Monthly housing allowances (MHA) for students",
+          "Book and supply stipends",
+          "Vocational rehabilitation (Chapter 31)",
+          "Flight training and on-the-job training"
+        ],
+        "fraudEstimate": {
+          "amount": 590000000,
+          "percentage": 3.9,
+          "source": "VA OIG Education Audits",
+          "examples": [
+            "For-profit school fraud — ITT Tech, Corinthian Colleges misuse",
+            "Schools misreporting enrollment to collect housing allowances",
+            "GI Bill used at schools later sanctioned or closed"
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "education",
     "name": "Education",
     "amount": 238000000000,
-    "percentage": 3.8,
+    "percentage": 3.9,
     "color": "#ec4899",
-    "description": "Federal student aid, K-12 grants, Head Start, and education research. Most K-12 funding comes from states."
+    "description": "Federal student aid, K-12 grants, and education research. The $1.7T student loan portfolio is the government's largest financial asset.",
+    "lead": "Miguel Cardona",
+    "leadTitle": "Secretary of Education",
+    "leadWebsite": "https://www.ed.gov",
+    "spendingItems": [
+      "Federal student loan disbursements and income-driven repayment",
+      "Pell Grants for low-income undergraduates",
+      "Title I grants to high-poverty K-12 schools",
+      "IDEA — special education funding",
+      "Head Start early childhood programs",
+      "Loan forgiveness programs (PSLF, IDR)"
+    ],
+    "fraudEstimate": {
+      "amount": 6200000000,
+      "percentage": 2.6,
+      "source": "ED OIG FY2023; GAO Student Aid Reports",
+      "examples": [
+        "Student loan fraud — fake enrollment and identity theft ($3B+ annually)",
+        "Pell Grant fraud — students not attending classes",
+        "For-profit school fraud (Corinthian, ITT, DeVry settlements)",
+        "Financial aid eligibility errors costing $4B+"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "student_aid",
+        "name": "Federal Student Aid (Loans & Pell)",
+        "amount": 168000000000,
+        "lead": "Richard Cordray",
+        "leadTitle": "Chief Operating Officer, Federal Student Aid",
+        "description": "Student loans, Pell Grants, and work-study funding for higher education, managed by Federal Student Aid (FSA).",
+        "spendingItems": [
+          "Direct student loan disbursements ($100B+/year)",
+          "Pell Grants to 6.7M students (~$7,395 max award)",
+          "Income-driven repayment subsidies",
+          "Public Service Loan Forgiveness (PSLF) discharges",
+          "Loan administration contracts (MOHELA, Nelnet, AIDVANTAGE)"
+        ],
+        "fraudEstimate": {
+          "amount": 5100000000,
+          "percentage": 3.0,
+          "source": "ED OIG; FSA Improper Payments FY2023",
+          "examples": [
+            "Fraud mills submitting fake FAFSA applications",
+            "Pell Grant eligibility fraud ($1.5B+)",
+            "Servicer overcharging and improper capitalization of interest"
+          ]
+        }
+      },
+      {
+        "id": "k12_grants",
+        "name": "K-12 Education Grants",
+        "amount": 46000000000,
+        "lead": "Roberto Rodriguez",
+        "leadTitle": "Assistant Secretary for Elementary & Secondary Education",
+        "description": "Title I, IDEA special education, and other formula grants flowing to all U.S. school districts.",
+        "spendingItems": [
+          "Title I grants to 56,000 high-poverty schools",
+          "IDEA special education grants to states",
+          "Title II teacher quality grants",
+          "School improvement and turnaround grants",
+          "21st Century Community Learning Centers"
+        ],
+        "fraudEstimate": {
+          "amount": 920000000,
+          "percentage": 2.0,
+          "source": "ED OIG; GAO K-12 Oversight Reports",
+          "examples": [
+            "Grant funds used for non-educational purchases",
+            "Misreported student counts for Title I allocation",
+            "Improper subcontracting of federal education services"
+          ]
+        }
+      },
+      {
+        "id": "head_start",
+        "name": "Head Start & Early Childhood",
+        "amount": 12000000000,
+        "lead": "Assistant Secretary for Children & Families",
+        "leadTitle": "HHS Administration for Children & Families",
+        "description": "Comprehensive early childhood development for low-income children under 5, including education, health, nutrition, and family services.",
+        "spendingItems": [
+          "Head Start center-based preschool (800,000 children)",
+          "Early Head Start for infants and toddlers",
+          "Child care and development block grants",
+          "Home visiting programs for at-risk families"
+        ],
+        "fraudEstimate": {
+          "amount": 180000000,
+          "percentage": 1.5,
+          "source": "HHS OIG Head Start Audits",
+          "examples": ["Grantee financial mismanagement", "Enrollment inflation"]
+        }
+      }
+    ]
   },
   {
     "id": "transportation",
     "name": "Transportation & Infrastructure",
     "amount": 167000000000,
-    "percentage": 2.6,
+    "percentage": 2.7,
     "color": "#14b8a6",
-    "description": "Highways, bridges, airports, rail, and public transit. Includes the Infrastructure Investment and Jobs Act spending."
+    "description": "Highways, bridges, airports, rail, and public transit. Significantly boosted by the $1.2T Bipartisan Infrastructure Law (2021).",
+    "lead": "Pete Buttigieg",
+    "leadTitle": "Secretary of Transportation",
+    "leadWebsite": "https://www.transportation.gov",
+    "spendingItems": [
+      "Federal-aid highway program (FHWA) — $65B+",
+      "Federal Transit Administration grants",
+      "FAA — air traffic control, airport safety, airports",
+      "Amtrak and intercity passenger rail",
+      "Maritime and pipeline safety",
+      "Infrastructure Investment and Jobs Act implementation"
+    ],
+    "fraudEstimate": {
+      "amount": 4800000000,
+      "percentage": 2.9,
+      "source": "DOT OIG FY2023; GAO Infrastructure Reports",
+      "examples": [
+        "Highway contract fraud — substandard materials, inflated bids ($1B+ annually)",
+        "DBE (Disadvantaged Business Enterprise) front company fraud",
+        "Davis-Bacon wage fraud on federally funded projects",
+        "FAA contractor overcharges on NextGen air traffic system"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "fhwa",
+        "name": "Federal Highway Administration",
+        "amount": 65000000000,
+        "lead": "Shailen Bhatt",
+        "leadTitle": "Administrator, FHWA",
+        "description": "Funds construction and maintenance of the Interstate Highway System and other federal-aid roads through grants to states.",
+        "spendingItems": [
+          "Interstate highway construction and reconstruction",
+          "Bridge replacement (45,000+ structurally deficient bridges)",
+          "Highway safety improvements",
+          "Electric vehicle charging network buildout",
+          "State and local road formula grants"
+        ],
+        "fraudEstimate": {
+          "amount": 1800000000,
+          "percentage": 2.8,
+          "source": "FHWA OIG; FBI highway fraud statistics",
+          "examples": [
+            "Bid rigging on highway contracts (DOJ prosecutions)",
+            "DBE fraud — fake minority-owned businesses",
+            "Substandard materials misrepresented on bridge projects"
+          ]
+        }
+      },
+      {
+        "id": "faa",
+        "name": "Federal Aviation Administration",
+        "amount": 18000000000,
+        "lead": "Mike Whitaker",
+        "leadTitle": "FAA Administrator",
+        "description": "Regulates civil aviation safety, manages the National Airspace System, and funds airport infrastructure.",
+        "spendingItems": [
+          "Air Traffic Organization — 14,000 controllers managing 45,000 daily flights",
+          "Airport Improvement Program grants",
+          "NextGen airspace modernization",
+          "Aviation safety certification and oversight",
+          "Drone and urban air mobility integration"
+        ],
+        "fraudEstimate": {
+          "amount": 600000000,
+          "percentage": 3.3,
+          "source": "DOT OIG FAA Audits",
+          "examples": [
+            "Boeing 737 MAX certification failures — inadequate oversight cost 346 lives",
+            "Airport grant fund misuse by local authorities",
+            "Aviation maintenance fraud — falsified repair records"
+          ]
+        }
+      },
+      {
+        "id": "transit",
+        "name": "Federal Transit Administration",
+        "amount": 22000000000,
+        "lead": "Nuria Fernandez",
+        "leadTitle": "FTA Administrator",
+        "description": "Capital and operating grants for buses, subways, light rail, and commuter rail systems nationwide.",
+        "spendingItems": [
+          "Capital investment grants (New Starts) for major transit projects",
+          "Urbanized area formula grants for operating costs",
+          "State of good repair — fixing aging transit infrastructure",
+          "Low-income and rural transit access"
+        ],
+        "fraudEstimate": {
+          "amount": 400000000,
+          "percentage": 1.8,
+          "source": "FTA OIG Audits",
+          "examples": ["Procurement irregularities at transit agencies", "Buy America waiver abuse"]
+        }
+      }
+    ]
   },
   {
     "id": "health_research",
     "name": "Health Research & Public Health",
     "amount": 98000000000,
-    "percentage": 1.5,
+    "percentage": 1.6,
     "color": "#84cc16",
-    "description": "NIH research grants, CDC operations, FDA oversight, and disease prevention programs."
+    "description": "NIH research grants, CDC operations, FDA oversight, and other public health programs.",
+    "lead": "Dr. Monica Bertagnolli",
+    "leadTitle": "Director, National Institutes of Health",
+    "leadWebsite": "https://www.nih.gov",
+    "spendingItems": [
+      "NIH research grants to universities and labs ($48B)",
+      "CDC disease surveillance and prevention programs",
+      "FDA food and drug safety regulation",
+      "HRSA community health centers and rural health",
+      "SAMHSA mental health and addiction treatment grants",
+      "AHRQ healthcare quality research"
+    ],
+    "fraudEstimate": {
+      "amount": 2800000000,
+      "percentage": 2.9,
+      "source": "HHS OIG; NIH OIG Research Integrity Reports",
+      "examples": [
+        "NIH grant fraud — fabricated data and duplicate billing ($500M+ per year)",
+        "Community health center billing fraud",
+        "COVID-19 HRSA uninsured fund fraud ($2.5B overpayments)",
+        "Research misconduct — data falsification costing grant resources"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "nih",
+        "name": "National Institutes of Health (NIH)",
+        "amount": 48000000000,
+        "lead": "Dr. Monica Bertagnolli",
+        "leadTitle": "NIH Director",
+        "description": "World's largest public funder of biomedical research — supporting 300,000+ researchers at 2,500+ institutions.",
+        "spendingItems": [
+          "Extramural research grants (80% of budget) to universities and medical schools",
+          "Intramural research at NIH Bethesda campus",
+          "National Cancer Institute ($7B) — cancer research",
+          "NIAID ($6.5B) — infectious diseases, vaccines, HIV/AIDS",
+          "NHLBI ($4B) — heart, lung, and blood diseases",
+          "Training grants for new researchers"
+        ],
+        "fraudEstimate": {
+          "amount": 1200000000,
+          "percentage": 2.5,
+          "source": "NIH OIG; HHS OIG Research Integrity",
+          "examples": [
+            "Researchers billing time on multiple conflicting grants",
+            "Foreign influence — undisclosed Chinese funding (DOJ China Initiative)",
+            "Fabricated data in published studies leading to retracted grants"
+          ]
+        }
+      },
+      {
+        "id": "cdc",
+        "name": "Centers for Disease Control and Prevention",
+        "amount": 9000000000,
+        "lead": "Dr. Mandy Cohen",
+        "leadTitle": "CDC Director",
+        "description": "Protects Americans from health threats. Coordinates disease surveillance, immunization programs, and emergency response.",
+        "spendingItems": [
+          "Infectious disease surveillance and outbreak response",
+          "Vaccines for Children program",
+          "Chronic disease prevention programs",
+          "Public health emergency preparedness grants to states",
+          "Global health security programs",
+          "Opioid overdose prevention"
+        ],
+        "fraudEstimate": {
+          "amount": 450000000,
+          "percentage": 5.0,
+          "source": "HHS OIG CDC Audits",
+          "examples": [
+            "COVID-19 PPE procurement fraud ($1.8B in contracts with fraud indicators)",
+            "Grant recipient misuse of funds by state health departments"
+          ]
+        }
+      },
+      {
+        "id": "fda",
+        "name": "Food and Drug Administration",
+        "amount": 4000000000,
+        "lead": "Dr. Robert Califf",
+        "leadTitle": "FDA Commissioner",
+        "description": "Regulates food safety, drugs, medical devices, cosmetics, and tobacco — overseeing $2.8T in consumer products annually.",
+        "spendingItems": [
+          "Drug approval review (user fee funded + appropriations)",
+          "Food safety inspections (imports and domestic)",
+          "Medical device premarket review",
+          "Tobacco regulation",
+          "Drug shortage monitoring and prevention"
+        ],
+        "fraudEstimate": {
+          "amount": 200000000,
+          "percentage": 5.0,
+          "source": "FDA OIG",
+          "examples": [
+            "Fraudulent foreign drug manufacturing records submitted for approval",
+            "Clinical trial data manipulation by pharmaceutical companies"
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "international",
     "name": "International Affairs",
     "amount": 72000000000,
-    "percentage": 1.1,
+    "percentage": 1.2,
     "color": "#a855f7",
-    "description": "Foreign aid, diplomatic missions, international development, and global health programs. Less than 1% of the budget."
+    "description": "Foreign aid, diplomatic missions, international development, and global security assistance. Less than 1% of the total federal budget.",
+    "lead": "Antony Blinken",
+    "leadTitle": "Secretary of State",
+    "leadWebsite": "https://www.state.gov",
+    "spendingItems": [
+      "State Department diplomatic operations (290 embassies/consulates)",
+      "USAID development assistance ($27B)",
+      "Military security assistance to allies",
+      "Millennium Challenge Corporation (MCC) compacts",
+      "Peace Corps operations in 60+ countries",
+      "International organizations contributions (UN, WHO, etc.)"
+    ],
+    "fraudEstimate": {
+      "amount": 3600000000,
+      "percentage": 5.0,
+      "source": "State OIG; USAID OIG FY2023",
+      "examples": [
+        "Foreign partner government corruption siphoning USAID funds",
+        "Contractor fraud in conflict zones (Afghanistan: $19B in reconstruction waste)",
+        "Duplicate billing by international implementing partners",
+        "Embassy construction cost overruns ($100M+ per project)"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "usaid",
+        "name": "USAID Development Assistance",
+        "amount": 27000000000,
+        "lead": "Samantha Power",
+        "leadTitle": "USAID Administrator",
+        "description": "U.S. Agency for International Development funds economic development, democracy, global health, and disaster relief worldwide.",
+        "spendingItems": [
+          "Global health: HIV/AIDS (PEPFAR $6.9B), malaria, TB programs",
+          "Food for Peace and humanitarian assistance",
+          "Democracy and governance programs",
+          "Economic growth and trade capacity building",
+          "Disaster response and recovery"
+        ],
+        "fraudEstimate": {
+          "amount": 1500000000,
+          "percentage": 5.6,
+          "source": "USAID OIG; Special Inspector General for Afghanistan",
+          "examples": [
+            "Partner organization fraud in high-risk countries",
+            "Afghanistan reconstruction: $19B in waste, fraud and abuse (SIGAR)",
+            "Phantom beneficiary counts inflating program metrics"
+          ]
+        }
+      },
+      {
+        "id": "state_dept",
+        "name": "State Department Operations",
+        "amount": 8000000000,
+        "lead": "Antony Blinken",
+        "leadTitle": "Secretary of State",
+        "description": "Funding for U.S. embassies, consulates, and diplomatic missions worldwide — America's first line of foreign policy.",
+        "spendingItems": [
+          "Overseas embassy and consulate operations",
+          "Diplomatic security and Marine security guard program",
+          "Passport and visa processing",
+          "American citizen services overseas",
+          "Public diplomacy and educational exchanges (Fulbright)"
+        ],
+        "fraudEstimate": {
+          "amount": 400000000,
+          "percentage": 5.0,
+          "source": "State OIG",
+          "examples": ["Construction contractor fraud", "Visa fraud enabling criminal networks"]
+        }
+      },
+      {
+        "id": "military_assistance",
+        "name": "Military Security Assistance",
+        "amount": 15000000000,
+        "lead": "Under Secretary of State for Arms Control",
+        "leadTitle": "Department of State / DoD",
+        "description": "Foreign Military Financing (FMF) and other security assistance programs to allied and partner nations.",
+        "spendingItems": [
+          "Ukraine military assistance ($12B+ in FY2023)",
+          "Israel Foreign Military Financing",
+          "Taiwan security assistance",
+          "NATO partner capacity building",
+          "Coalition partner equipment and training"
+        ],
+        "fraudEstimate": {
+          "amount": 1200000000,
+          "percentage": 8.0,
+          "source": "DoD OIG; SIGAR; Ukraine aid oversight reports",
+          "examples": [
+            "Weapons diversion risk in conflict zones",
+            "End-use monitoring failures — equipment reaching unintended actors"
+          ]
+        }
+      }
+    ]
   },
   {
-    "id": "other",
-    "name": "All Other",
-    "amount": 479000000000,
-    "percentage": 7.6,
+    "id": "homeland_security",
+    "name": "Homeland Security",
+    "amount": 98000000000,
+    "percentage": 1.6,
+    "color": "#0ea5e9",
+    "description": "Border security, immigration enforcement, airport security, FEMA disaster response, and Coast Guard operations.",
+    "lead": "Alejandro Mayorkas",
+    "leadTitle": "Secretary of Homeland Security",
+    "leadWebsite": "https://www.dhs.gov",
+    "spendingItems": [
+      "Customs and Border Protection — 700-mile wall, ports of entry",
+      "ICE immigration enforcement and detention",
+      "TSA — airport security screening at 440+ airports",
+      "FEMA disaster response and mitigation grants",
+      "Secret Service — presidential protection and financial crimes",
+      "Coast Guard maritime safety and interdiction",
+      "CISA — cybersecurity of federal networks and critical infrastructure"
+    ],
+    "fraudEstimate": {
+      "amount": 4500000000,
+      "percentage": 4.6,
+      "source": "DHS OIG Annual Report FY2023",
+      "examples": [
+        "FEMA disaster fraud — false addresses and fictitious damage claims ($5B+ in COVID/Ida/Harvey)",
+        "Border barrier contract fraud — inflated costs and kickbacks",
+        "ICE detention contractor billing for unperformed services",
+        "TSA equipment procurement fraud"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "fema",
+        "name": "FEMA — Emergency Management",
+        "amount": 31000000000,
+        "lead": "Deanne Criswell",
+        "leadTitle": "FEMA Administrator",
+        "description": "Federal Emergency Management Agency coordinates disaster response, mitigation grants, and flood insurance programs.",
+        "spendingItems": [
+          "Individual assistance — disaster survivor housing and cash grants",
+          "Public assistance — rebuilding government infrastructure post-disaster",
+          "Hazard Mitigation Grant Program",
+          "National Flood Insurance Program (NFIP)",
+          "Emergency food and shelter program"
+        ],
+        "fraudEstimate": {
+          "amount": 3100000000,
+          "percentage": 10.0,
+          "source": "FEMA OIG; GAO-23-106061",
+          "examples": [
+            "Hurricane Ida, Harvey, Maria: $1B+ in fraudulent individual assistance claims",
+            "COVID-19 FEMA funeral assistance fraud: $400M+",
+            "Contractors submitting fraudulent debris removal tonnage",
+            "Duplicate applications using multiple addresses"
+          ]
+        }
+      },
+      {
+        "id": "cbp",
+        "name": "Customs & Border Protection",
+        "amount": 25000000000,
+        "lead": "Troy Miller",
+        "leadTitle": "Acting CBP Commissioner",
+        "description": "Secures U.S. borders against illegal entry of people and contraband while facilitating lawful trade and travel.",
+        "spendingItems": [
+          "20,000+ Border Patrol agents along southern and northern borders",
+          "Port of entry operations — $900B in daily trade",
+          "Air and Marine Operations surveillance",
+          "Border barrier system maintenance",
+          "Automated targeting systems for cargo screening"
+        ],
+        "fraudEstimate": {
+          "amount": 800000000,
+          "percentage": 3.2,
+          "source": "DHS OIG; CBP Internal Affairs",
+          "examples": [
+            "Agent corruption — facilitating drug smuggling for cartels",
+            "Border wall contract fraud and cost inflation",
+            "CBP equipment procurement overcharges"
+          ]
+        }
+      },
+      {
+        "id": "tsa",
+        "name": "Transportation Security Administration",
+        "amount": 10000000000,
+        "lead": "David Pekoske",
+        "leadTitle": "TSA Administrator",
+        "description": "Protects the nation's transportation systems through airport security screening and surface transportation security.",
+        "spendingItems": [
+          "Airport passenger and baggage screening (56,000 officers)",
+          "Advanced imaging technology (AIT scanners) and equipment",
+          "PreCheck and Global Entry trusted traveler programs",
+          "Federal Air Marshal Service",
+          "Surface transportation security (rail, mass transit)"
+        ],
+        "fraudEstimate": {
+          "amount": 350000000,
+          "percentage": 3.5,
+          "source": "TSA OIG; GAO-22-104523",
+          "examples": [
+            "Equipment procurement fraud — security scanner overbilling",
+            "Officer misconduct and theft at checkpoints ($30M+ annually)",
+            "PreCheck vetting contract irregularities"
+          ]
+        }
+      },
+      {
+        "id": "coast_guard",
+        "name": "U.S. Coast Guard",
+        "amount": 13000000000,
+        "lead": "Admiral Linda Fagan",
+        "leadTitle": "Commandant, U.S. Coast Guard",
+        "description": "Maritime law enforcement, search and rescue, aids to navigation, and port security — the only armed service in DHS.",
+        "spendingItems": [
+          "Search and rescue operations (20,000+ missions/year)",
+          "Drug interdiction and migrant interdiction at sea",
+          "Port and waterway security",
+          "Icebreaking operations in Arctic and Antarctic",
+          "Marine safety inspections and licensing"
+        ],
+        "fraudEstimate": {
+          "amount": 250000000,
+          "percentage": 1.9,
+          "source": "DHS OIG Coast Guard Audits",
+          "examples": ["Cutter maintenance contract overcharges", "Equipment procurement irregularities"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "housing",
+    "name": "Housing & Urban Development",
+    "amount": 65000000000,
+    "percentage": 1.1,
+    "color": "#f43f5e",
+    "description": "Federal housing assistance, community development grants, and fair housing enforcement. Serves 4.8M assisted households.",
+    "lead": "Adrianne Todman",
+    "leadTitle": "Acting Secretary of Housing and Urban Development",
+    "leadWebsite": "https://www.hud.gov",
+    "spendingItems": [
+      "Section 8 Housing Choice Vouchers (2.3M households)",
+      "Public housing operating and capital fund",
+      "Project-based Section 8 contract renewals",
+      "Community Development Block Grants (CDBG)",
+      "HOME Investment Partnerships grants",
+      "FHA mortgage insurance operations"
+    ],
+    "fraudEstimate": {
+      "amount": 3800000000,
+      "percentage": 5.8,
+      "source": "HUD OIG Annual Report FY2023",
+      "examples": [
+        "Tenant income fraud — underreporting earnings to maintain vouchers",
+        "Landlord rent inflation beyond fair market value",
+        "CDBG grant misuse by local governments",
+        "Mortgage fraud enabled by FHA programs"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "section8",
+        "name": "Housing Choice Vouchers (Section 8)",
+        "amount": 30000000000,
+        "lead": "Office of Public and Indian Housing",
+        "leadTitle": "HUD",
+        "description": "Vouchers enabling 2.3M low-income families to rent in the private market, with HUD paying the difference between 30% of income and fair market rent.",
+        "spendingItems": [
+          "HAP (housing assistance payments) to private landlords",
+          "Administrative fees to 2,400+ Public Housing Authorities",
+          "Mobility counseling and portability support",
+          "Inspection and rent reasonableness determinations"
+        ],
+        "fraudEstimate": {
+          "amount": 2100000000,
+          "percentage": 7.0,
+          "source": "HUD OIG FY2023",
+          "examples": [
+            "Unreported income — tenants hiding wages/self-employment",
+            "Undetected household members (ineligible individuals)",
+            "Landlord side payments from tenants (cash back from voucher)"
+          ]
+        }
+      },
+      {
+        "id": "cdbg",
+        "name": "Community Development Block Grants",
+        "amount": 8000000000,
+        "lead": "Office of Community Planning and Development",
+        "leadTitle": "HUD",
+        "description": "Formula grants to states and cities for community development, affordable housing, and economic opportunity — flexible local use.",
+        "spendingItems": [
+          "Affordable housing rehabilitation and construction",
+          "Public facilities improvements (community centers, parks)",
+          "Economic development loans to small businesses",
+          "Public services (social services, job training)",
+          "Disaster recovery (CDBG-DR) for flood/storm areas"
+        ],
+        "fraudEstimate": {
+          "amount": 600000000,
+          "percentage": 7.5,
+          "source": "HUD OIG CDBG Audits",
+          "examples": [
+            "Grantees spending on ineligible activities",
+            "Duplication of benefits in disaster recovery",
+            "Contractor kickbacks in local CDBG programs"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "agriculture",
+    "name": "Agriculture & Food Safety",
+    "amount": 28000000000,
+    "percentage": 0.5,
+    "color": "#65a30d",
+    "description": "Farm support programs, rural development, food safety inspection, and conservation. Note: SNAP and child nutrition are counted under Income Security.",
+    "lead": "Tom Vilsack",
+    "leadTitle": "Secretary of Agriculture",
+    "leadWebsite": "https://www.usda.gov",
+    "spendingItems": [
+      "Agricultural risk coverage and price loss coverage (farm payments)",
+      "Conservation programs (CRP, EQIP, CSP)",
+      "Rural development loans and grants",
+      "Crop insurance premium subsidies",
+      "Food safety inspection (FSIS) of meat and poultry",
+      "Agricultural research (ARS) and extension (NIFA)"
+    ],
+    "fraudEstimate": {
+      "amount": 1900000000,
+      "percentage": 6.8,
+      "source": "USDA OIG FY2023; GAO Farm Subsidy Reports",
+      "examples": [
+        "Farm subsidy fraud — payments to non-farmers and urban dwellers ($695M identified)",
+        "Crop insurance fraud — inflating losses or misrepresenting yields",
+        "Rural housing program fraud — misrepresented income eligibility",
+        "Conservation payment fraud — claiming credit for non-existent practices"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "farm_programs",
+        "name": "Farm Support & Commodity Programs",
+        "amount": 10000000000,
+        "lead": "Zach Ducheneaux",
+        "leadTitle": "Administrator, Farm Service Agency",
+        "description": "Direct payments, marketing loans, and price support for corn, soybeans, wheat, cotton, dairy, and other commodities.",
+        "spendingItems": [
+          "Agricultural Risk Coverage (ARC) and Price Loss Coverage (PLC) payments",
+          "Marketing assistance loans",
+          "Dairy margin coverage program",
+          "Livestock disaster programs",
+          "Emergency farm loans"
+        ],
+        "fraudEstimate": {
+          "amount": 900000000,
+          "percentage": 9.0,
+          "source": "USDA OIG; GAO-12-460",
+          "examples": [
+            "Payments to deceased farmers ($10M+ annually)",
+            "Non-farming entities receiving farm subsidies",
+            "Income limit circumvention through entity structuring"
+          ]
+        }
+      },
+      {
+        "id": "crop_insurance",
+        "name": "Crop Insurance Subsidies",
+        "amount": 8000000000,
+        "lead": "Risk Management Agency",
+        "leadTitle": "USDA",
+        "description": "Federal subsidy of premiums for crop insurance policies protecting farmers against yield and revenue losses.",
+        "spendingItems": [
+          "Premium subsidy covering 62% of farmers' insurance costs",
+          "Reinsurance to 15 approved private crop insurers",
+          "Delivery cost reimbursement to agents",
+          "Prevented planting coverage"
+        ],
+        "fraudEstimate": {
+          "amount": 700000000,
+          "percentage": 8.8,
+          "source": "USDA OIG Crop Insurance Audits",
+          "examples": [
+            "False claims — reporting crop losses that didn't occur",
+            "Agent fraud — inflating production records for higher payouts",
+            "Intentional destruction of crops to collect insurance"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "energy",
+    "name": "Energy & Environment",
+    "amount": 60000000000,
+    "percentage": 1.0,
+    "color": "#eab308",
+    "description": "Department of Energy programs including nuclear security, clean energy R&D, and grid modernization. Also includes EPA environmental programs.",
+    "lead": "Jennifer Granholm",
+    "leadTitle": "Secretary of Energy",
+    "leadWebsite": "https://www.energy.gov",
+    "spendingItems": [
+      "Nuclear weapons stockpile stewardship (NNSA) — counted in Defense",
+      "Clean energy R&D: solar, wind, batteries, hydrogen",
+      "Loan programs for clean energy projects ($400B portfolio)",
+      "EPA clean water, clean air, and Superfund programs",
+      "Strategic Petroleum Reserve management",
+      "Grid reliability and electricity infrastructure",
+      "Environmental cleanup of legacy DOE nuclear sites"
+    ],
+    "fraudEstimate": {
+      "amount": 2400000000,
+      "percentage": 4.0,
+      "source": "DOE OIG; EPA OIG FY2023",
+      "examples": [
+        "Clean energy loan fraud — Solyndra ($535M loss) and similar failures",
+        "IRA (Inflation Reduction Act) clean energy credit fraud risk (IRS flagging)",
+        "Superfund contractor overcharges",
+        "Renewable energy tax credit schemes ($1B+ in fraudulent claims)"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "clean_energy",
+        "name": "Clean Energy R&D & Deployment",
+        "amount": 25000000000,
+        "lead": "David Turk",
+        "leadTitle": "Deputy Secretary of Energy",
+        "description": "Research, development, and deployment of solar, wind, batteries, hydrogen, nuclear, and other clean energy technologies.",
+        "spendingItems": [
+          "Office of Energy Efficiency & Renewable Energy (EERE)",
+          "ARPA-E advanced energy research",
+          "DOE loan programs (LPO) — guarantees for innovative projects",
+          "Grid modernization and cybersecurity",
+          "Carbon capture and storage R&D"
+        ],
+        "fraudEstimate": {
+          "amount": 1200000000,
+          "percentage": 4.8,
+          "source": "DOE OIG; GAO Clean Energy Reports",
+          "examples": ["Loan Program Office defaults (Solyndra, others)", "Grant recipient misuse of funds"]
+        }
+      },
+      {
+        "id": "epa_programs",
+        "name": "EPA — Environmental Protection",
+        "amount": 10000000000,
+        "lead": "Michael Regan",
+        "leadTitle": "EPA Administrator",
+        "description": "Enforces environmental laws, funds clean water infrastructure, and operates Superfund toxic site cleanup.",
+        "spendingItems": [
+          "Clean Water State Revolving Fund ($2.7B)",
+          "Drinking Water State Revolving Fund ($1.1B)",
+          "Superfund hazardous waste site cleanup ($1.1B)",
+          "Air quality monitoring and enforcement",
+          "Climate and environmental justice grants (new in IRA)"
+        ],
+        "fraudEstimate": {
+          "amount": 500000000,
+          "percentage": 5.0,
+          "source": "EPA OIG FY2023",
+          "examples": [
+            "Superfund contractor overcharges and inflated labor rates",
+            "State revolving fund diversion to ineligible projects",
+            "Environmental justice grant fraud (emerging issue)"
+          ]
+        }
+      },
+      {
+        "id": "doe_cleanup",
+        "name": "Environmental Cleanup (DOE Legacy Sites)",
+        "amount": 25000000000,
+        "lead": "Office of Environmental Management",
+        "leadTitle": "Department of Energy",
+        "description": "Cleanup of radioactive and chemical contamination at former nuclear weapons sites — a 75-year, $500B+ project.",
+        "spendingItems": [
+          "Hanford Site cleanup (Washington) — largest nuclear cleanup",
+          "Savannah River Site (SC) tank waste treatment",
+          "Idaho National Laboratory cleanup",
+          "Portsmouth/Paducah gaseous diffusion plant decommissioning",
+          "Low-level radioactive waste disposal"
+        ],
+        "fraudEstimate": {
+          "amount": 700000000,
+          "percentage": 2.8,
+          "source": "DOE OIG Environmental Cleanup Audits",
+          "examples": [
+            "Bechtel/AECOM overcharges on Hanford Waste Treatment Plant ($2B+ over budget)",
+            "Contractor labor mischarging and fee fraud",
+            "Cost-plus contract abuse enabling runaway project costs"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "science_technology",
+    "name": "Science & Technology",
+    "amount": 43000000000,
+    "percentage": 0.7,
+    "color": "#6366f1",
+    "description": "NASA space exploration, NSF research grants, NOAA weather and climate programs, and NIST standards.",
+    "lead": "Dr. Arati Prabhakar",
+    "leadTitle": "Director, Office of Science & Technology Policy",
+    "leadWebsite": "https://www.nasa.gov",
+    "spendingItems": [
+      "NASA — Artemis moon program, Mars exploration, James Webb Telescope",
+      "NSF — basic research grants across all scientific disciplines",
+      "NOAA — weather forecasting, climate research, fisheries",
+      "NIST — measurement standards, cybersecurity framework",
+      "OSTP — federal science and technology policy"
+    ],
+    "fraudEstimate": {
+      "amount": 1100000000,
+      "percentage": 2.6,
+      "source": "NASA OIG; NSF OIG FY2023",
+      "examples": [
+        "NASA contractor overcharges (Boeing SLS: $2.8B over budget)",
+        "NSF grant fraud — researchers double-billing or fabricating results",
+        "NOAA contract irregularities"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "nasa",
+        "name": "NASA",
+        "amount": 25400000000,
+        "lead": "Bill Nelson",
+        "leadTitle": "NASA Administrator",
+        "description": "National Aeronautics and Space Administration leads U.S. space exploration, aeronautics research, and Earth science.",
+        "spendingItems": [
+          "Artemis program — return to the Moon ($6B+/year)",
+          "James Webb Space Telescope operations",
+          "Mars exploration (Perseverance rover, Ingenuity)",
+          "International Space Station operations",
+          "Commercial crew (SpaceX, Boeing) and cargo contracts",
+          "Earth science climate satellites"
+        ],
+        "fraudEstimate": {
+          "amount": 800000000,
+          "percentage": 3.1,
+          "source": "NASA OIG FY2023 Semiannual Report",
+          "examples": [
+            "Boeing SLS (Space Launch System): $2.8B over original contract price",
+            "Orion spacecraft cost growth: $5.4B → $14.9B (276% increase)",
+            "Contractor labor mischarging on ISS operations"
+          ]
+        }
+      },
+      {
+        "id": "nsf",
+        "name": "National Science Foundation",
+        "amount": 9500000000,
+        "lead": "Dr. Sethuraman Panchanathan",
+        "leadTitle": "NSF Director",
+        "description": "Funds basic research across all non-medical scientific disciplines at universities, supporting 300,000+ researchers annually.",
+        "spendingItems": [
+          "Research grants in mathematics, physics, chemistry, biology",
+          "Computer science and AI research ($900M+)",
+          "Social and behavioral science research",
+          "STEM education programs",
+          "Major research infrastructure (telescopes, ice cores, ships)"
+        ],
+        "fraudEstimate": {
+          "amount": 200000000,
+          "percentage": 2.1,
+          "source": "NSF OIG Semiannual Reports",
+          "examples": [
+            "Foreign influence: researchers concealing Chinese government funding",
+            "Time and effort fraud — billing NSF for work done on other grants",
+            "Data fabrication in grant applications"
+          ]
+        }
+      },
+      {
+        "id": "noaa",
+        "name": "NOAA",
+        "amount": 6400000000,
+        "lead": "Dr. Rick Spinrad",
+        "leadTitle": "NOAA Administrator",
+        "description": "National Oceanic and Atmospheric Administration — weather forecasting, climate research, fisheries, and satellite operations.",
+        "spendingItems": [
+          "National Weather Service (10,000 daily forecasts, warnings)",
+          "Weather satellite constellation (GOES, JPSS)",
+          "Climate research and modeling",
+          "Fisheries management and marine sanctuaries",
+          "Ocean monitoring and tsunami warning"
+        ],
+        "fraudEstimate": {
+          "amount": 100000000,
+          "percentage": 1.6,
+          "source": "NOAA OIG Audits",
+          "examples": ["Satellite contract overcharges", "Fisheries permit fraud by fishing industry"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "justice",
+    "name": "Justice & Law Enforcement",
+    "amount": 43000000000,
+    "percentage": 0.7,
+    "color": "#64748b",
+    "description": "Federal law enforcement, prosecution, courts, and corrections. Oversees FBI, DEA, ATF, federal prison system, and the federal judiciary.",
+    "lead": "Merrick Garland",
+    "leadTitle": "Attorney General",
+    "leadWebsite": "https://www.justice.gov",
+    "spendingItems": [
+      "FBI — counterterrorism, cybercrime, financial crime, violent crime",
+      "DEA — drug enforcement and international narcotics control",
+      "Bureau of Prisons — 150,000+ federal inmates",
+      "U.S. Marshals — fugitive apprehension and courthouse security",
+      "Federal judiciary — district and appellate courts",
+      "ATF — firearms, explosives, arson",
+      "Civil rights enforcement",
+      "Grants to state and local law enforcement"
+    ],
+    "fraudEstimate": {
+      "amount": 2100000000,
+      "percentage": 4.9,
+      "source": "DOJ OIG FY2023 Annual Report",
+      "examples": [
+        "DOJ grant fraud — state and local recipients misusing federal law enforcement grants",
+        "BOP contractor billing fraud for inmate services",
+        "Asset forfeiture abuse and improper fund use",
+        "FBI/DEA informant payment fraud"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "fbi",
+        "name": "Federal Bureau of Investigation",
+        "amount": 10700000000,
+        "lead": "Christopher Wray",
+        "leadTitle": "FBI Director",
+        "description": "Primary federal law enforcement agency investigating terrorism, cybercrime, organized crime, public corruption, and civil rights violations.",
+        "spendingItems": [
+          "Counterterrorism investigations and disruption operations",
+          "Cyber Division — ransomware, nation-state intrusions",
+          "Public corruption — politicians, police, officials",
+          "Financial crime — securities fraud, money laundering",
+          "56 field offices + 400 resident agencies nationwide",
+          "CJIS — criminal justice information services (fingerprints, NCIC)"
+        ],
+        "fraudEstimate": {
+          "amount": 320000000,
+          "percentage": 3.0,
+          "source": "DOJ OIG FBI Audits",
+          "examples": [
+            "Undercover operation fund misuse",
+            "Confidential informant payment irregularities",
+            "IT project cost overruns (Sentinel system: $405M for $170M project)"
+          ]
+        }
+      },
+      {
+        "id": "bop",
+        "name": "Bureau of Prisons",
+        "amount": 8000000000,
+        "lead": "Colette Peters",
+        "leadTitle": "BOP Director",
+        "description": "Operates 122 federal correctional facilities housing 150,000 inmates and employing 35,000 staff.",
+        "spendingItems": [
+          "Daily inmate housing and care ($44,000/inmate/year average)",
+          "Medical and mental health services",
+          "Educational and vocational programs",
+          "Contracted private prison beds (CoreCivic, GEO Group)",
+          "Staff salaries and overtime"
+        ],
+        "fraudEstimate": {
+          "amount": 800000000,
+          "percentage": 10.0,
+          "source": "DOJ OIG BOP Reports",
+          "examples": [
+            "Private prison contractor overbilling for empty beds",
+            "Employee misconduct — smuggling contraband for payment",
+            "Healthcare contractor fraud — billing for unperformed services",
+            "FCI Dublin and other scandal-ridden facilities"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "commerce",
+    "name": "Commerce & Trade",
+    "amount": 16000000000,
+    "percentage": 0.3,
+    "color": "#0891b2",
+    "description": "Department of Commerce programs supporting economic growth, trade promotion, census operations, and technology standards.",
+    "lead": "Gina Raimondo",
+    "leadTitle": "Secretary of Commerce",
+    "leadWebsite": "https://www.commerce.gov",
+    "spendingItems": [
+      "Census Bureau — decennial census and economic statistics",
+      "Patent and Trademark Office (USPTO) — patent review and IP protection",
+      "NOAA (shared with Science) — weather and climate",
+      "NIST — measurement standards, cybersecurity framework",
+      "International Trade Administration — export promotion",
+      "CHIPS Act semiconductor grants ($52B program, multi-year)",
+      "Economic Development Administration — distressed community grants"
+    ],
+    "fraudEstimate": {
+      "amount": 640000000,
+      "percentage": 4.0,
+      "source": "Commerce OIG FY2023",
+      "examples": [
+        "CHIPS Act grant fraud risk — semiconductor companies overstating eligibility",
+        "Census contractor billing fraud",
+        "EDA grant misuse by economic development organizations"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "uspto",
+        "name": "Patent & Trademark Office",
+        "amount": 4000000000,
+        "lead": "Kathi Vidal",
+        "leadTitle": "Under Secretary of Commerce for Intellectual Property",
+        "description": "Reviews and grants patents and trademarks, primarily self-funded by user fees.",
+        "spendingItems": [
+          "Patent examination by 9,000+ patent examiners",
+          "Trademark registration and maintenance",
+          "IP policy and international coordination",
+          "Patent Trial and Appeal Board (PTAB)"
+        ],
+        "fraudEstimate": {
+          "amount": 180000000,
+          "percentage": 4.5,
+          "source": "USPTO OIG",
+          "examples": ["Patent examiner time fraud — telework abuse", "Fraudulent patent applications from foreign entities"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "labor",
+    "name": "Labor & Workforce",
+    "amount": 14000000000,
+    "percentage": 0.2,
+    "color": "#d97706",
+    "description": "Workplace safety, employment training, and worker protections. Note: unemployment insurance is counted under Income Security.",
+    "lead": "Julie Su",
+    "leadTitle": "Acting Secretary of Labor",
+    "leadWebsite": "https://www.dol.gov",
+    "spendingItems": [
+      "OSHA — workplace safety inspections and enforcement",
+      "Employment and Training Administration — job training grants",
+      "Bureau of Labor Statistics — CPI, jobs data, economic indicators",
+      "Wage and Hour Division — minimum wage and FMLA enforcement",
+      "Employee Benefits Security Administration — pension oversight",
+      "Mine Safety and Health Administration (MSHA)"
+    ],
+    "fraudEstimate": {
+      "amount": 700000000,
+      "percentage": 5.0,
+      "source": "DOL OIG FY2023",
+      "examples": [
+        "Job training grant fraud — contractors billing for non-existent training",
+        "Davis-Bacon prevailing wage fraud on federal projects",
+        "Pension fund fraud by plan administrators"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "job_training",
+        "name": "Employment & Training Programs",
+        "amount": 8000000000,
+        "lead": "Brent Parton",
+        "leadTitle": "Acting Assistant Secretary, ETA",
+        "description": "Workforce Innovation and Opportunity Act (WIOA) grants for job training, apprenticeships, and employment services.",
+        "spendingItems": [
+          "Adult, dislocated worker, and youth job training",
+          "American Job Centers (workforce centers) operations",
+          "Apprenticeship grants and expansion",
+          "Trade Adjustment Assistance for displaced workers",
+          "Reentry programs for formerly incarcerated individuals"
+        ],
+        "fraudEstimate": {
+          "amount": 480000000,
+          "percentage": 6.0,
+          "source": "DOL OIG WIOA Audits",
+          "examples": [
+            "Contractors billing for training participants who didn't attend",
+            "Inflated performance outcomes to maintain contracts"
+          ]
+        }
+      },
+      {
+        "id": "osha",
+        "name": "OSHA — Workplace Safety",
+        "amount": 600000000,
+        "lead": "Doug Parker",
+        "leadTitle": "Assistant Secretary for Occupational Safety & Health",
+        "description": "Sets and enforces workplace safety standards across 130M workers in 8M workplaces.",
+        "spendingItems": [
+          "Safety inspections at high-hazard workplaces",
+          "State plan programs (29 states run their own OSHA)",
+          "Employer compliance assistance and training",
+          "Standards development for new workplace hazards"
+        ],
+        "fraudEstimate": {
+          "amount": 30000000,
+          "percentage": 5.0,
+          "source": "DOL OIG OSHA Audits",
+          "examples": ["False safety certifications by contractors"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "interior_environment",
+    "name": "Interior & Natural Resources",
+    "amount": 25000000000,
+    "percentage": 0.4,
+    "color": "#16a34a",
+    "description": "National parks, public lands, tribal programs, and natural resource management across 500M+ acres of federal land.",
+    "lead": "Deb Haaland",
+    "leadTitle": "Secretary of the Interior",
+    "leadWebsite": "https://www.doi.gov",
+    "spendingItems": [
+      "National Park Service — 423 parks, 330M annual visitors",
+      "Bureau of Land Management — 245M acres of public lands",
+      "U.S. Fish & Wildlife Service — endangered species, wildlife refuges",
+      "Bureau of Indian Affairs and Bureau of Indian Education",
+      "Bureau of Reclamation — western water infrastructure",
+      "USGS — geological surveys, earthquake monitoring"
+    ],
+    "fraudEstimate": {
+      "amount": 1200000000,
+      "percentage": 4.8,
+      "source": "DOI OIG FY2023",
+      "examples": [
+        "Oil and gas royalty underpayment on federal lands ($1B+/year estimated)",
+        "Tribal trust fund mismanagement (Cobell settlement: $3.4B)",
+        "Park concession contractor billing irregularities",
+        "Illegal mining and grazing on federal land"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "nps",
+        "name": "National Park Service",
+        "amount": 4000000000,
+        "lead": "Chuck Sams",
+        "leadTitle": "NPS Director",
+        "description": "Manages 423 national parks, monuments, historic sites, and recreation areas — 85M acres protecting America's natural and cultural heritage.",
+        "spendingItems": [
+          "Park operations: rangers, maintenance, visitor services",
+          "Historic preservation grants to states",
+          "Maintenance backlog reduction ($22B backlog)",
+          "Concession oversight",
+          "Urban parks and recreation programs"
+        ],
+        "fraudEstimate": {
+          "amount": 200000000,
+          "percentage": 5.0,
+          "source": "NPS OIG Audits",
+          "examples": ["Concession operator revenue underreporting", "Construction contractor fraud"]
+        }
+      },
+      {
+        "id": "bia",
+        "name": "Bureau of Indian Affairs & Education",
+        "amount": 3500000000,
+        "lead": "Bryan Newland",
+        "leadTitle": "Assistant Secretary for Indian Affairs",
+        "description": "Services to 574 federally recognized tribes — social services, law enforcement, land management, and the Bureau of Indian Education's 183 schools.",
+        "spendingItems": [
+          "Tribal self-determination contracts and compacts",
+          "Bureau of Indian Education — K-12 schools on reservations",
+          "Law enforcement and detention on tribal lands",
+          "Social services: child welfare, housing, elderly care",
+          "Water rights settlements and land restoration"
+        ],
+        "fraudEstimate": {
+          "amount": 350000000,
+          "percentage": 10.0,
+          "source": "DOI OIG Tribal Programs Audits",
+          "examples": [
+            "Tribal trust fund accounting failures (historical Cobell case)",
+            "Contract support cost billing irregularities",
+            "School construction fraud at BIE schools"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "general_government",
+    "name": "General Government & Administration",
+    "amount": 25000000000,
+    "percentage": 0.4,
     "color": "#94a3b8",
-    "description": "Science, energy, environment, agriculture, justice, general government, and other federal activities."
+    "description": "Congress, the White House, federal courts, and government-wide administrative agencies like GSA, OPM, and OMB.",
+    "lead": "Various — Legislative, Executive, Judicial branches",
+    "leadTitle": "Congress, President, Chief Justice",
+    "leadWebsite": "https://www.usa.gov",
+    "spendingItems": [
+      "Legislative Branch — Senate, House, support agencies ($7B)",
+      "Executive Office of the President — White House, NSC, OMB ($0.8B)",
+      "Federal court system — district, appeals, Supreme Court ($8B)",
+      "General Services Administration — federal buildings and purchasing",
+      "Office of Personnel Management — federal employee benefits",
+      "National Archives, Government Printing Office"
+    ],
+    "fraudEstimate": {
+      "amount": 1000000000,
+      "percentage": 4.0,
+      "source": "GAO High Risk List; GSA OIG; Judicial Conduct Reports",
+      "examples": [
+        "GSA purchasing fraud and vendor kickbacks",
+        "Congressional office expenditure abuse ($5M+ in misused MRA funds)",
+        "Federal employee time fraud (telework era)",
+        "GSA Las Vegas conference scandal ($820K)"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "legislative",
+        "name": "Legislative Branch (Congress)",
+        "amount": 7000000000,
+        "lead": "Speaker Mike Johnson / Senate Majority Leader Schumer",
+        "leadTitle": "House Speaker / Senate Majority Leader",
+        "description": "Operating budget for the Senate, House of Representatives, Capitol Police, Library of Congress, CBO, GAO, and other legislative agencies.",
+        "spendingItems": [
+          "Senate and House member offices and staff ($1.6B each)",
+          "Capitol complex maintenance and security",
+          "Library of Congress operations",
+          "Government Accountability Office (GAO)",
+          "Congressional Budget Office (CBO)",
+          "Congressional Research Service"
+        ],
+        "fraudEstimate": {
+          "amount": 350000000,
+          "percentage": 5.0,
+          "source": "House Ethics Committee; OCE Reports",
+          "examples": [
+            "Member Representational Allowance (MRA) misuse — personal expenses charged",
+            "Insider trading by members on non-public information (STOCK Act violations)",
+            "Campaign fund commingling with office expenses"
+          ]
+        }
+      },
+      {
+        "id": "federal_courts",
+        "name": "Federal Judiciary",
+        "amount": 8000000000,
+        "lead": "Chief Justice John Roberts",
+        "leadTitle": "Chief Justice, U.S. Supreme Court",
+        "description": "Operating budgets for 94 district courts, 13 appellate courts, the Supreme Court, bankruptcy courts, and probation/pretrial services.",
+        "spendingItems": [
+          "Federal judge salaries (1,000+ Article III judges)",
+          "Courthouse operations and security",
+          "Defender services — Federal Public Defender offices",
+          "Court interpretation services",
+          "Electronic filing and case management systems"
+        ],
+        "fraudEstimate": {
+          "amount": 200000000,
+          "percentage": 2.5,
+          "source": "Judicial Conference OIG",
+          "examples": [
+            "Recusal failures — judges hearing cases with financial conflicts",
+            "Interpreter fraud — billing for uncertified translations"
+          ]
+        }
+      },
+      {
+        "id": "gsa",
+        "name": "General Services Administration",
+        "amount": 5000000000,
+        "lead": "Robin Carnahan",
+        "leadTitle": "GSA Administrator",
+        "description": "Government's landlord and buyer — manages 370M sq ft of federal real estate and $75B+ in annual government purchasing.",
+        "spendingItems": [
+          "Federal building operations and maintenance",
+          "Government-wide contract vehicles (MAS schedules)",
+          "Fleet vehicle acquisition and management",
+          "Technology acquisition and FedRAMP cloud authorization",
+          "Presidential transition support"
+        ],
+        "fraudEstimate": {
+          "amount": 450000000,
+          "percentage": 9.0,
+          "source": "GSA OIG Semiannual Report FY2023",
+          "examples": [
+            "Contractor fraud on government-wide contract vehicles",
+            "Commercial item pricing manipulation",
+            "Lease fraud and improper building procurement"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "other_programs",
+    "name": "Other Federal Programs",
+    "amount": 40000000000,
+    "percentage": 0.7,
+    "color": "#78716c",
+    "description": "Smaller agencies, independent commissions, and cross-cutting programs not captured in major categories.",
+    "lead": "Various Agencies",
+    "leadTitle": "Multiple Independent Agencies",
+    "leadWebsite": "https://www.usa.gov/agencies",
+    "spendingItems": [
+      "Small Business Administration — disaster loans, business grants",
+      "USPS — postal operations support",
+      "FCC — telecommunications regulation",
+      "SEC — securities market oversight",
+      "FDIC — bank deposit insurance",
+      "Nuclear Regulatory Commission",
+      "Equal Employment Opportunity Commission"
+    ],
+    "fraudEstimate": {
+      "amount": 2000000000,
+      "percentage": 5.0,
+      "source": "Various OIG reports",
+      "examples": [
+        "SBA COVID-19 EIDL fraud: $200B+ in fraudulent applications during pandemic",
+        "PPP (Paycheck Protection Program) fraud: $64B+ in fraudulent loans",
+        "USPS contract fraud"
+      ]
+    },
+    "subCategories": [
+      {
+        "id": "sba",
+        "name": "Small Business Administration",
+        "amount": 12000000000,
+        "lead": "Isabel Guzman",
+        "leadTitle": "SBA Administrator",
+        "description": "Supports small businesses through loans, grants, contracting opportunities, and disaster assistance.",
+        "spendingItems": [
+          "7(a) loan guarantees to small businesses",
+          "504 loans for commercial real estate and equipment",
+          "Small Business Investment Company (SBIC) program",
+          "Disaster loans (physical and economic injury)",
+          "SBIR/STTR innovation research grants to small companies"
+        ],
+        "fraudEstimate": {
+          "amount": 1800000000,
+          "percentage": 15.0,
+          "source": "SBA OIG; GAO COVID Fraud Report",
+          "examples": [
+            "COVID EIDL fraud: $200B+ applied fraudulently (2020-2022)",
+            "PPP fraud: $64B+ in loans to ineligible entities (DOJ ongoing prosecutions)",
+            "Sole-source SDVOSB/8(a) contract fraud — shell companies"
+          ]
+        }
+      }
+    ]
   }
 ]
