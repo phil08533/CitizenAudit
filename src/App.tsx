@@ -1,3 +1,4 @@
+import { Component, type ReactNode } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
@@ -14,29 +15,50 @@ import { CitizenResponsibility } from './pages/CitizenResponsibility'
 
 const BASE = import.meta.env.BASE_URL
 
+class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
+  state = { error: null }
+  static getDerivedStateFromError(error: Error) { return { error } }
+  render() {
+    if (this.state.error) {
+      return (
+        <div style={{ padding: 40, fontFamily: 'monospace', backgroundColor: '#fff', minHeight: '100vh' }}>
+          <h1 style={{ color: '#B22234' }}>CitizenAudit — Something went wrong</h1>
+          <pre style={{ background: '#f5f5f5', padding: 16, borderRadius: 8, overflow: 'auto', color: '#1a1a2e' }}>
+            {String(this.state.error)}
+          </pre>
+          <p><a href={BASE} style={{ color: '#1E2864' }}>← Reload the app</a></p>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
+
 export default function App() {
   return (
-    <BrowserRouter basename={BASE}>
-      <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#f8f7f2', color: '#1a1a2e' }}>
-        <Navbar />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tax-estimator" element={<TaxEstimator />} />
-            <Route path="/spending" element={<SpendingExplorer />} />
-            <Route path="/agency/:id" element={<AgencyDetail />} />
-            <Route path="/representatives" element={<Representatives />} />
-            <Route path="/contact" element={<ContactAction />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/sources" element={<Sources />} />
-            <Route path="/tax-history" element={<TaxHistory />} />
-            <Route path="/responsibility" element={<CitizenResponsibility />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter basename={BASE}>
+        <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#f8f7f2', color: '#1a1a2e' }}>
+          <Navbar />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tax-estimator" element={<TaxEstimator />} />
+              <Route path="/spending" element={<SpendingExplorer />} />
+              <Route path="/agency/:id" element={<AgencyDetail />} />
+              <Route path="/representatives" element={<Representatives />} />
+              <Route path="/contact" element={<ContactAction />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/sources" element={<Sources />} />
+              <Route path="/tax-history" element={<TaxHistory />} />
+              <Route path="/responsibility" element={<CitizenResponsibility />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </ErrorBoundary>
   )
 }
 
